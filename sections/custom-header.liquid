@@ -1,0 +1,110 @@
+<header id="header" class="d-flex a-center space-b">
+    <div class="container d-flex a-center space-b">
+        {%- if request.page_type == 'index' -%}
+            <h1 class="header__heading">
+            {%- endif -%}
+            {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                <a href="{{ routes.root_url }}" class="header-logo">
+                {%- if settings.logo != blank -%}
+                    <img src="{{ settings.logo | image_url }}"  alt="{{ logo_alt }}">
+                {%- else -%}
+                    <span class="h2">{{ shop.name }}</span>
+                {%- endif -%}
+                </a>
+            {%- if request.page_type == 'index' -%}
+            </h1>
+            {%- endif -%}
+                
+        <div class="header-cta d-flex a-center space-b">
+            <div class="search-func d-flex a-center">
+                <form class="search-box" id="search-click">
+                    <input type="search" class="text search-input" placeholder="Type here to search..." />
+                </form>
+                <a href="#." id="search-toggle"><img src="{{'search-icon.svg' | asset_url}}" alt="search-icon"></a>
+            </div>
+            {% if section.settings.dealer_login != blank %}                
+                <a class="header-dealer-log-in tab-hidden" href="{{ section.settings.dealer_url | default : "#." }}"> {{ section.settings.dealer_login }} </a>
+            {% endif %}
+            {% if section.settings.dealer_register != blank %}
+                <a href="{{ section.settings.dealer_register_url | default : "#." }}" class="primary-btn tab-hidden">{{ section.settings.dealer_register }}</a>
+            {% endif %}
+            {% if section.settings.contact_button != blank %}
+                <a href="{{ section.settings.contact_button_url | default : "#." }}" class="primary-btn tab-hidden">{{ section.settings.contact_button }}</a>
+            {% endif %}
+            <nav id="nav" class="menusflex">
+                <ul class="d-flex a-center space-b">
+                    {% for link in linklists[section.settings.main_menu].links %}                        
+                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+            
+                    {% if section.settings.dealer_login != blank %}                                        
+                        <li class="desktop-hidden-tab"><a href="{{ section.settings.dealer_url | default : "#." }}">{{ section.settings.dealer_login }}</a></li>
+                    {% endif %}
+                    {% if section.settings.dealer_register != blank %}
+                        <li class="desktop-hidden-tab"><a href="{{ section.settings.dealer_register_url | default : "#." }}">{{ section.settings.dealer_register }}</a></li>
+                    {% endif %}
+                    {% if section.settings.contact_button != blank %}                        
+                        <li class="desktop-hidden-tab"><a href="{{ section.settings.contact_button_url | default : "#." }}">{{ section.settings.contact_button }}</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="toggle-menu">
+                <div class="hamburger d-flex a-center jc-end" id="hamburger-6">
+                    <img class="header-hamburger-icon" src="{{'header-hamburger-icon.svg' | asset_url}}"
+                        alt="Menu">
+                    <span class="header-hamburger-text">Menu</span>
+                    <div class="toggle-click-bars">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% schema %}
+{
+    "name": "Header",
+    "settings": [
+        {
+            "type": "link_list",
+            "id": "main_menu",
+            "label": "Main Menu"
+        },
+        {
+            "type": "text",
+            "id": "dealer_login",
+            "label": "Button Text",
+            "default": "Dealer Log In"
+        },
+        {
+            "type": "url",
+            "id": "dealer_url",
+            "label": "Dealer Login URL"
+        },
+        {
+            "type": "text",
+            "id": "dealer_register",
+            "label": "Button Text",
+            "default": "Dealer Log In"
+        },
+        {
+            "type": "url",
+            "id": "dealer_register_url",
+            "label": "Dealer Register URL"
+        },
+        {
+            "type": "text",
+            "id": "contact_button",
+            "label": "Button Text",
+            "default": "Dealer Log In"
+        },
+        {
+            "type": "url",
+            "id": "contact_button_url",
+            "label": "Page URL"
+        }
+    ]
+}
+{% endschema %}

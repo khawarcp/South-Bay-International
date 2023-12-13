@@ -1,0 +1,65 @@
+<!-- Global Hero Section -->
+<section class="home-hero-section d-flex a-center jc-start global-banner"
+    style="background-image: url({{ section.settings.image | image_url }});">
+    <div class="container">
+        <h1 class="home-hero-heading">
+            <span class="heading-piece"> {{ section.settings.heading }}
+        </h1>
+    </div>
+    {% unless section.settings.vector_position == 'none' %}    
+        {% if section.settings.vector_position == 'left' %}
+            <div class="bottom-vector-global d-flex">
+                <img src="{{ 'bottom-vector.png'| asset_url }}" alt="bottom-vector">
+            </div>
+        {% endif %}    
+        {% if section.settings.vector_position == 'right' %}
+            <div class="bottom-vector-global bottom-vector-right d-flex">
+                <img src="{{ 'bottom-right-vector.png'| asset_url }}" alt="bottom-right-vector">
+            </div>
+        {% endif %}    
+    {% endunless %}
+</section>
+
+{% schema %}
+    {
+        "name": "Page Banner",        
+        "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Customize Your Sleep</span><br> Products with Us"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "select",
+                "id": "vector_position",
+                "label": "Vector Image",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "value": "right",
+                        "label": "Right"
+                    }
+                ],
+                "default": "none"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Page Banner"
+            }
+        ]
+    }
+{% endschema %}

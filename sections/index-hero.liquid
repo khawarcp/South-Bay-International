@@ -1,0 +1,35 @@
+<!-- Home Hero Section -->
+<section class="home-hero-section d-flex a-center jc-start"
+    style="background-image: url({{ section.settings.bg_image | image_url }});">
+    <div class="container">
+        <h1 class="home-hero-heading">
+            {{ section.settings.heading }}
+        </h1>
+    </div>
+    <div class="bottom-vector-global d-flex">
+        <img src="{{ 'bottom-vector.png'| asset_url }}" alt="bottom-vector">
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Hero",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Background Image"
+            },
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Hero"
+            }
+        ]
+    }
+{% endschema %}

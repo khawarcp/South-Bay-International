@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "page-banner": {
+      "type": "page-banner",
+      "settings": {
+        "heading": "Customize Your Sleep<br> Products with Us",
+        "image": "shopify:\/\/shop_images\/innovate-page-banner.png",
+        "vector_position": "left"
+      }
+    },
+    "9deddde5-6278-4077-a254-0cc66ad3aaa9": {
+      "type": "innovation-richtext-with-image",
+      "settings": {
+      }
+    },
+    "8e534aa8-a779-403f-b49a-0862a66eb6c7": {
+      "type": "innovation-features",
+      "settings": {
+      }
+    },
+    "90b06920-b840-47aa-a459-143999a6a534": {
+      "type": "index-single-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/innovation-visuals-only.png",
+        "vector_position": "right"
+      }
+    },
+    "8c0ad9f9-c660-4f30-b826-126cda7aeecd": {
+      "type": "innovation-form",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "page-banner",
+    "9deddde5-6278-4077-a254-0cc66ad3aaa9",
+    "8e534aa8-a779-403f-b49a-0862a66eb6c7",
+    "90b06920-b840-47aa-a459-143999a6a534",
+    "8c0ad9f9-c660-4f30-b826-126cda7aeecd"
+  ]
+}

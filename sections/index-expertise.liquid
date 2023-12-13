@@ -1,0 +1,81 @@
+<!-- Home Expertise Section -->
+<section class="home-expertise section-padding">
+    <div class="container">
+        <div class="yellow-bar"></div>
+        <div class="d-flex space-b a-center flex-wrap">
+            <div class="expertise-child">
+                {% if section.settings.heading != blank %}
+                    <h2> {{ section.settings.heading }} </h2>                    
+                {% endif %}
+                {% if section.settings.text != blank %}
+                    <p> {{ section.settings.text }} </p>
+                {% endif %}
+            </div>
+            <div class="expertise-child">
+                {% if section.settings.image != blank %}                    
+                    <img src="{{ section.settings.image | image_url  }}" alt="{{ section.settings.image.alt }}">
+                {% endif %}
+                <div class="expertise-cta d-flex a-center jc-center">
+                    {% if section.settings.button_text_1 != blank %}                
+                        <a class="primary-btn" href="{{ section.settings.button_url_1 | default : "#." }}"> {{ section.settings.button_text_1 }} </a>
+                    {% endif %}
+                    {% if section.settings.button_text_2 != blank %}                
+                        <a class="primary-btn" href="{{ section.settings.button_url_2 | default : "#." }}"> {{ section.settings.button_text_2 }} </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Expertise",        
+        "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Expertise Tailored</span><br> to Your Needs"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "The creation of mattresses, adjustable bases, bedding and bed frames is our specialty. From design to execution, we tirelessly test all of our products to guarantee compliance with industry guidelines and the high standards of South Bay International. Whether you’re looking for a turnkey, private label or an innovative custom sleep solution, we’re there for you. Let's inspire better sleep, together!"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "button_text_1",
+                "label": "Button Text",
+                "default": "Explore<br> Our Products"
+            },
+            {
+                "type": "url",
+                "id": "button_url_1",
+                "label": "Button URL"
+            },
+            {
+                "type": "text",
+                "id": "button_text_2",
+                "label": "Button Text",
+                "default": "Innovate<br> with Us"
+            },
+            {
+                "type": "url",
+                "id": "button_url_2",
+                "label": "Button URL"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Expertise"
+            }
+        ]
+    }
+{% endschema %}

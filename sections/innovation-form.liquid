@@ -1,0 +1,59 @@
+<!-- Innovate Main Form Section -->
+<section class="home-expertise contact-form-main-sec innovate-form-sec section-padding">
+    <div class="d-flex space-b a-start flex-wrap f-row-reverse">
+        <div class="expertise-child">
+            <div class="yellow-bar inner-div-bar"></div>
+            <h2><span>Let’s Get</span> Dreaming</h2>
+            <p>Creating a better sleep product begins here! Fill out our form to get started</p>
+            <div class="contact-main-form-div">
+                <form>
+                    <div class="form-field-contact d-flex f-col a-start">
+                        <label class="form-label-contact">Name</label>
+                        <input class="input-field-contact" type="text">
+                    </div>
+                    <div class="form-field-contact d-flex f-col a-start">
+                        <label class="form-label-contact">Email</label>
+                        <input class="input-field-contact" type="email">
+                    </div>
+                    <div class="form-field-contact d-flex f-col a-start">
+                        <label class="form-label-contact">Phone Number</label>
+                        <input class="input-field-contact" type="tel">
+                    </div>
+                    <div class="form-field-contact d-flex f-col a-start">
+                        <label class="form-label-contact">Tell Us What You’re Interested in Creating:</label>
+                        <textarea class="input-textarea-contact" placeholder="I’m looking to create…"></textarea>
+                    </div>
+                    <div class="form-field-contact">
+                        <label class="form-label-checkbox" for="agreement-click">
+                            <input class="form-checkbox-contact" type="checkbox" name="agreement-click"
+                                id="agreement-click">
+                            <span class="checkmark"></span>
+                            Opt in for South Bay
+                            International’s newsletter.
+                        </label>
+                    </div>
+                    <div class="form-field-contact d-flex a-center jc-center">
+                        <button class="primary-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="expertise-child">
+            <img src="./assets/visuals/innovate-form-image.png" alt="Expertise">
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Innovation Form",        
+        "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name": "Innovation Form"
+            }
+        ]
+    }
+{% endschema %}

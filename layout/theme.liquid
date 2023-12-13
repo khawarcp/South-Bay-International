@@ -236,18 +236,10 @@
         grid-template-columns: 100%;
         min-height: 100%;
         margin: 0;
-        font-size: 1.5rem;
-        letter-spacing: 0.06rem;
-        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        letter-spacing: 0.06rem;        
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
-      }
-
-      @media screen and (min-width: 750px) {
-        body {
-          font-size: 1.6rem;
-        }
       }
     {% endstyle %}
 
@@ -280,6 +272,12 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+          <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'media.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'custom-base.css' | asset_url }}">
+    
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -348,5 +346,32 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+        <!-- jQuery Version 3.2.1 -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="{{ 'script.js'| asset_url }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+
+    <script>
+        const lenis = new Lenis({
+            duration: 3,
+            smoothWheel: true,
+            lerp: 0.8,
+            wrapper: window,
+        })
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+    </script>
+
   </body>
 </html>

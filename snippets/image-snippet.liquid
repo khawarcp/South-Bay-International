@@ -1,0 +1,7 @@
+{% if image %}
+<img {% if class %} class="{{ class }}" {% endif %}
+     {% if lazyload %} loading="{{ lazyload }}" {% endif %} 
+        src="{{ image | image_url }}" alt="{{ image.alt }}">
+{% else %}
+{{ 'image' | placeholder_svg_tag }}
+{% endif %}

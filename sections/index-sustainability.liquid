@@ -1,0 +1,70 @@
+<!-- Home Sustainability -->
+<section class="home-partner home-sustainability section-padding">
+    <div class="d-flex a-center space-b flex-wrap">
+        <div class="home-partner-child tab-hidden-images">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child">
+            <div class="section-bar-partners"></div>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            {% render 'image-snippet', image: section.settings.image_1, class: 'desktop-hidden-images' %}
+            {% if section.settings.text != blank %}
+                <p> {{ section.settings.text }} </p>
+            {% endif %}
+            {% if section.settings.button_text_1 != blank %}                
+                <a class="primary-btn" href="{{ section.settings.button_url_1 | default : "#." }}"> {{ section.settings.button_text_1 }} </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Sustainability",
+        "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Your Partner</span> in<br> Innovation"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "At South Bay International, we’re building better sleep brands. As one of the largest mattress and adjustable base factories in the world, we have the space to dream big. From pioneering the “Bed in a Box” concept to innovating the latest adjustable bases, partnering with us means you never have to miss out on zzz’s. We’ve got your customers’ backs as they rest upon our expertise."
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_1",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "button_text_1",
+                "label": "Button Text",
+                "default": "Explore<br> Our Products"
+            },
+            {
+                "type": "url",
+                "id": "button_url_1",
+                "label": "Button URL"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Sustainability"
+            }
+        ]
+    }
+{% endschema %}
+
+

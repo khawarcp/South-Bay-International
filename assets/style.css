@@ -1,0 +1,999 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*Global Styling*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  font-family: "Work Sans", sans-serif;
+  background: #fff;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  font-family: "Work Sans", sans-serif;
+}
+a,
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #0c2340;
+}
+
+h1,
+.h1 {
+  font-style: italic;
+  font-size: 64px;
+  line-height: 106.25%;
+  letter-spacing: -1.92px;
+}
+
+h2,
+.h2 {
+  font-size: 64px;
+  font-style: italic;
+  line-height: normal;
+}
+
+h3,
+.h3 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  line-height: normal;
+}
+
+h4,
+.h4 {
+  font-size: 24px;
+  font-style: normal;
+  line-height: 125%;
+}
+
+h5,
+.h5 {
+  font-size: 20px;
+}
+
+h6,
+.h6 {
+  font-size: 16px;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+  color: #696969;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+textarea {
+  resize: none;
+  font-family: "Work Sans", sans-serif;
+}
+
+ul.nav > li a {
+  -moz-transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+/* Global Flex */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+.f-row {
+  flex-direction: row;
+}
+
+.space-b {
+  justify-content: space-between;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.a-start {
+  align-items: flex-start;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+.row-gap-69 {
+  row-gap: 69px;
+}
+.f-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Button Styling */
+.primary-btn {
+  width: 240px;
+  height: 80px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  color: #0c2340;
+  background: #f2b941;
+  border: 1px solid #f2b941;
+  transition: all 0.4s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary-btn:hover {
+  background-color: transparent !important;
+  color: #0c2340 !important;
+}
+
+.heading-piece {
+  color: #0c2340;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.section-padding {
+  padding: 69px 0;
+}
+
+/* HAMBURGER CSS STARTS*/
+.toggle-menu {
+  position: relative;
+  height: 49.374px;
+  width: 100px;
+  overflow: hidden;
+}
+.header-hamburger-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 76.552px;
+  height: 49.374px;
+}
+.toggle-menu:hover .header-hamburger-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#hamburger-6 {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.header-hamburger-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0;
+  visibility: hidden;
+}
+.toggle-menu:hover .header-hamburger-text {
+  opacity: 1;
+  visibility: visible;
+}
+.is-active .header-hamburger-text {
+  display: none;
+}
+.is-active .header-hamburger-icon {
+  display: none;
+}
+#hamburger-6.is-active {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  border: 1px solid white;
+  width: 49px;
+  height: 49px;
+  justify-content: center;
+}
+
+.toggle-click-bars {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger-6 .line {
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+}
+#hamburger-6.is-active .line {
+  opacity: 1;
+  visibility: visible;
+}
+
+#hamburger-6.is-active .line:nth-child(1),
+#hamburger-6.is-active .line:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  width: 30px;
+}
+
+#hamburger-6.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(11px);
+  margin-top: -10px;
+}
+
+#hamburger-6.is-active .line:nth-child(2) {
+  -webkit-transform: translateY(9px) rotate(90deg);
+  -ms-transform: translateY(9px) rotate(90deg);
+  -o-transform: translateY(9px) rotate(90deg);
+  transform: translateY(9px) rotate(90deg);
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 1px;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.is-active {
+  z-index: 100 !important;
+  position: relative;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.menusflex {
+  position: fixed;
+  right: -103%;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(94, 123, 171, 0.9);
+  transition: 0.5s ease-in-out;
+  z-index: 99;
+}
+
+.menusflex.active {
+  right: 0;
+}
+
+.menusflex ul li a {
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  margin: 40px 0 0;
+  transition: all 0.3s linear;
+}
+
+.menusflex ul li a:hover {
+  color: #0c2340;
+}
+
+.menusflex ul {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/* HAMBURGER CSS ENDS */
+
+/* ************************************************************************ */
+
+/* HEADER STYLING */
+#header {
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  transition: 0.5s ease-in-out;
+  z-index: 9;
+}
+
+.header-active {
+  background-color: #0c2340;
+  height: 110px !important;
+}
+
+.header-cta {
+  gap: 16px;
+}
+
+.header-dealer-log-in {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.header-cta .primary-btn:nth-child(3) {
+  background: #d3d3d3;
+  border: 1px solid #d3d3d3;
+}
+
+.header-cta .primary-btn:hover {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.header-active .header-logo {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+}
+
+.desktop-hidden-tab {
+  display: none;
+}
+
+.desktop-hidden-images {
+  display: none;
+}
+
+/* SEARCH BAR STYLING */
+#search-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+.search-input {
+  height: 80px;
+  outline: none;
+  padding: 10px;
+  margin-right: -25px;
+  width: 400px;
+  color: #696969;
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  width: 97%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid #0c2340;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.show-search .search-input {
+  bottom: -80px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-active .search-input {
+  width: 100%;
+  padding: 20px;
+}
+
+/* FOOTER STYLING */
+#footer {
+  position: relative;
+  background: #0c2340;
+  padding: 69px 0 90px;
+}
+
+.scroll-to-top img {
+  width: 50px;
+  height: 50px;
+}
+
+.scroll-to-top {
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.84px;
+  position: absolute;
+  top: -80px;
+  right: 35px;
+}
+
+.bottom-footer span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.socail-ul img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+.footer-scoial-media {
+  width: 100%;
+  max-width: 13%;
+}
+
+.bottom-footer {
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.socail-ul {
+  gap: 40px;
+}
+
+.top-footer-child {
+  width: 100%;
+  max-width: 13%;
+}
+
+.top-footer-child:nth-child(2) {
+  max-width: 13%;
+}
+
+.top-footer-child:nth-child(3) {
+  max-width: 13%;
+}
+
+.top-footer-child:nth-child(4) {
+  max-width: 22%;
+}
+
+.top-footer-child:last-child {
+  max-width: 30%;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.top-footer-child a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+}
+
+.footer-menu-heading {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.space-top-add {
+  display: block;
+  margin-top: 10px;
+}
+
+a.dealer-footer-link {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.top-footer-child .primary-btn {
+  background: #b5b5b5;
+  border: 1px solid #b5b5b5;
+  color: #0c2340;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.top-footer-child .primary-btn:hover {
+  color: #b5b5b5 !important;
+}
+.top-footer-child li a {
+  font-weight: 700;
+}
+.footer-cta-links li a{
+  font-weight: 400;
+}
+
+/* HOME SECTIONS CSS */
+.home-hero-section {
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bottom-vector-global {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+
+#footer .bottom-vector-global {
+  top: -70px;
+  bottom: auto;
+}
+
+.home-hero-heading {
+  color: #0c2340;
+}
+
+.home-hero-heading .heading-piece:last-child {
+  color: #fff;
+}
+
+.expertise-child {
+  width: 100%;
+  max-width: 50%;
+}
+
+.expertise-child h2 {
+  color: #f2b941;
+}
+
+.expertise-child h2 span {
+  font-style: normal;
+}
+
+.yellow-bar {
+  width: 45%;
+  height: 25px;
+  background: #f2b941;
+  margin-bottom: 69px;
+}
+
+.expertise-cta {
+  gap: 15px;
+}
+
+.expertise-child .primary-btn:last-child {
+  background: #b5b5b5;
+  border: 1px solid #b5b5b5;
+}
+
+.home-only-visuals {
+  position: relative;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.home-partner-child {
+  width: 100%;
+  max-width: 50%;
+}
+
+.home-partner-child:last-child {
+  padding: 0 50px;
+}
+
+.home-partner-child .primary-btn {
+  background: #0c2340;
+  border: 1px solid #0c2340;
+  color: #fff;
+  margin: 32px auto 0;
+}
+
+.home-partner-child h2 span {
+  font-style: normal;
+}
+
+.section-bar-partners {
+  height: 25px;
+  width: 100%;
+  background: #0c2340;
+  margin-bottom: 69px;
+}
+
+.home-blogs h2 {
+  color: #5e7bab;
+  margin-bottom: 69px;
+}
+
+.home-blogs h2 span {
+  font-style: normal;
+}
+
+.home-blogs .yellow-bar {
+  background: #5e7bab;
+}
+
+.home-blog-inner {
+  row-gap: 50px;
+}
+
+.blog-post {
+  width: 100%;
+  max-width: 32%;
+}
+
+.blog-post a {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.blog-post img {
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s linear;
+}
+
+.blog-post:hover img {
+  transform: scale(1.1);
+}
+
+.blog-posting-date {
+  font-family: "Work Sans", sans-serif;
+  color: #5e7bab;
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  margin: 41px 0 9px;
+}
+
+.blog-post h3 {
+  color: #5e7bab;
+  margin-bottom: 8px;
+}
+
+.blog-post-main-perma {
+  color: #5e7bab;
+  font-size: 20px;
+}
+
+.blog-post-main-perma img {
+  width: 17px;
+}
+
+.blog-post-main-perma:hover img {
+  margin-left: 5px;
+}
+
+.blog-post-main-perma {
+  display: flex !important;
+  gap: 8px;
+}
+
+.blog-post-main-perma img {
+  width: 17px;
+  height: 17px;
+}
+
+.home-blogs .primary-btn {
+  margin: 90px auto 0;
+  background-color: #5e7bab;
+  border: 1px solid #5e7bab;
+  color: #fff;
+}
+
+.bottom-vector-right {
+  right: 0;
+  left: auto;
+}
+
+.home-sustainability .section-bar-partners {
+  background: #f2b941;
+}
+
+.home-sustainability h2 {
+  color: #f2b941;
+}
+
+.home-sustainability .primary-btn {
+  background: #f2b941;
+  border: 1px solid #f2b941;
+  color: #0c2340;
+  margin-top: 75px;
+}
+
+.home-partner {
+  position: relative;
+}
+
+/* Contact Us Page Styling */
+.global-banner .home-hero-heading {
+  color: #fff;
+  text-shadow: 1px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.global-banner .heading-piece {
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  font-weight: 400;
+}
+.inner-div-bar {
+  width: 100%;
+  margin-bottom: 69px;
+}
+.contact-form-main-sec .expertise-child:first-child {
+  padding: 0 50px;
+}
+.contact-form-main-sec .expertise-child img {
+  height: 704px;
+  object-fit: cover;
+}
+.contact-main-form-div {
+  margin-top: 14px;
+}
+.form-label-contact {
+  color: #5e7bab;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.input-field-contact,
+.input-textarea-contact {
+  background: rgb(181 181 181 / 20%);
+  outline: none;
+  border: none;
+  height: 50px;
+  margin-bottom: 14px;
+  width: 100%;
+  padding: 0 14px;
+  color: #696969;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.input-textarea-contact {
+  height: 125px;
+  padding: 14px;
+}
+
+.form-label-checkbox {
+  position: relative;
+  color: #696969;
+  font-size: 22px;
+  cursor: pointer;
+}
+#agreement-click {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  margin-right: 16px;
+}
+.form-field-contact .primary-btn {
+  margin-top: 84px;
+  background: #0c2340 !important;
+  border: 1px solid #0c2340 !important;
+  color: #fff;
+  cursor: pointer;
+}
+.form-field-contact .primary-btn:hover {
+  background-color: transparent !important;
+  color: #0c2340 !important;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #0c2340;
+}
+
+/* On mouse-over, add a grey background color */
+.form-label-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the checkbox is checked, add a blue background */
+#agreement-click:checked ~ .checkmark {
+  background-color: #0c2340;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+#agreement-click:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+}
+
+.media-and-press-link img {
+  width: 27px !important;
+  height: 17px !important;
+}
+.press-and-media-main-data {
+  height: 357px;
+}
+.media-and-press-link {
+  color: #696969;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: underline !important;
+  gap: 14px;
+}
+
+/* Innovation Page Styling */
+.innovation-main-sec .expertise-child:first-child {
+  padding: 0 50px;
+}
+.innovation-main-sec .expertise-child img {
+  height: 500px;
+  object-fit: cover;
+}
+.innovate-feature-child-icon {
+  height: 144px;
+  width: 100%;
+}
+.innovation-features-child {
+  width: 100%;
+  max-width: 30%;
+}
+.innovate-form-sec .expertise-child img {
+  height: 918px;
+}
+.innovate-form-sec .expertise-child:first-child {
+  padding: 0 97px 0 50px;
+}
+.innovate-form-sec .yellow-bar {
+  background: #0c2340;
+}
+.innovate-form-sec .expertise-child h2 {
+  color: #0c2340;
+}
+.innovate-form-sec.section-padding {
+  padding-bottom: 100px;
+}
+section.innovation-features {
+  padding-top: 0;
+}
+
+/* Product Page Styling */
+.product-hero-section {
+  padding: 208px 0 88px;
+}
+.prodcut-hero-heading {
+  color: #f2b941;
+  font-style: normal;
+}
+.product-main-sec {
+  padding-bottom: 100px;
+}
+.product-main-child {
+  width: 100%;
+  max-width: 31%;
+}
+.product-thumbnail {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s linear;
+}
+.product-title-text {
+  color: #5e7bab;
+  margin-top: 21px;
+  display: block;
+}
+.loader-div {
+  margin-top: 52px;
+}
+.loader-div .primary-btn {
+  background: #5e7bab;
+  border: 1px solid #5e7bab;
+  color: #fff;
+}
+
+/* White BG Header Adjustment */
+.white-bg-adjust #search-toggle img {
+  filter: invert(1);
+}
+.white-bg-adjust .header-active #search-toggle img {
+  filter: none;
+}
+.white-bg-adjust .header-dealer-log-in {
+  color: #0c2340;
+}
+.white-bg-adjust .header-active .header-dealer-log-in {
+  color: #fff;
+}
+.white-bg-adjust .header-hamburger-text {
+  color: #0c2340;
+}
+.white-bg-adjust .header-active .header-hamburger-text {
+  color: #fff;
+}
+.white-bg-adjust .header-cta .primary-btn:hover {
+  color: #0c2340 !important;
+  border: 1px solid #0c2340 !important;
+}
+.white-bg-adjust .header-active .header-cta .primary-btn:hover {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}

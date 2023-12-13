@@ -1,0 +1,73 @@
+<!-- Home Blogs -->
+<section class="home-blogs section-padding">
+    <div class="container">
+        <div class="yellow-bar"></div>
+        {% if section.settings.heading != blank %}
+            <h2> {{ section.settings.heading }} </h2>                    
+        {% endif %}
+        <div class="home-blog-inner d-flex flex-wrap a-start space-b">
+            {% for article in blogs[section.settings.blog].articles limit: section.settings.no_articles %}                
+                <div class="blog-post">
+                    <a href="{{ article.url }}">
+                        {% render 'image-snippet', image: article.image %}
+                    </a>
+                    <span class="blog-posting-date"> {{- article.published_at | time_tag: format: 'date' -}} </span>
+                    <a href="{{ article.url }}">
+                        <h3> {{ article.title }} </h3>
+                    </a>
+                    <a class="blog-post-main-perma d-flex a-center" href="{{ article.url }}">Read Blog 
+                        <img src="{{ 'blog-link-arrow.svg' | asset_url }}" alt="blog-link-arrow">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        {% if section.settings.button_text_1 != blank %}                
+            <a class="primary-btn" href="{{ section.settings.button_url_1 | default : "#." }}"> {{ section.settings.button_text_1 }} </a>
+        {% endif %}
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Articles",
+        "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Your Partner</span> in<br> Innovation"
+            },
+            {
+                "type": "blog",
+                "id": "blog",
+                "label": "Blog"
+            },
+            {
+                "type": "range",
+                "id": "no_articles",
+                "label": "Number of Articles",
+                "min": 3,
+                "max": 9,
+                "step": 3,
+                "default": 3
+            },
+            {
+                "type": "text",
+                "id": "button_text_1",
+                "label": "Button Text",
+                "default": "Explore<br> Our Products"
+            },
+            {
+                "type": "url",
+                "id": "button_url_1",
+                "label": "Button URL"
+            }
+        ],
+        "presets": [
+            {
+                "name" : "Articles"
+            }
+        ]
+    }
+{% endschema %}

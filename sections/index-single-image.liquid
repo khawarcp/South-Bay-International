@@ -1,0 +1,55 @@
+<!-- Home Only Visuals -->
+<section class="home-only-visuals" style="background-image: url({{ section.settings.image | image_url }});">
+    {% unless section.settings.vector_position == 'none' %}    
+        {% if section.settings.vector_position == 'left' %}
+            <div class="bottom-vector-global d-flex">
+                <img src="{{ 'bottom-vector.png'| asset_url }}" alt="bottom-vector">
+            </div>
+        {% endif %}    
+        {% if section.settings.vector_position == 'right' %}
+            <div class="bottom-vector-global bottom-vector-right d-flex">
+                <img src="{{ 'bottom-right-vector.png'| asset_url }}" alt="bottom-right-vector">
+            </div>
+        {% endif %}    
+    {% endunless %}
+</section>
+
+
+
+{% schema %}
+    {
+        "name": "Single Image",        
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "select",
+                "id": "vector_position",
+                "label": "Vector Image",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "value": "right",
+                        "label": "Right"
+                    }
+                ],
+                "default": "none"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Single Image"
+            }
+        ]
+    }
+{% endschema %}

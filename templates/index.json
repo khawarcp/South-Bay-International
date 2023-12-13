@@ -1,75 +1,85 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "a2817e29-7da6-4f11-bef7-62f34c317c67": {
+      "type": "index-hero",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "bg_image": "shopify:\/\/shop_images\/home-hero-bg.png",
+        "heading": "<span class=\"heading-piece\">Dream,<\/span> Design,<br>Inspire, <span class=\"heading-piece\">Repeat.<\/span>"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "3c305731-5c6c-4cc4-908c-fc6c0be1ad1f": {
+      "type": "index-expertise",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "heading": "<span>Expertise Tailored<\/span><br> to Your Needs",
+        "text": "The creation of mattresses, adjustable bases, bedding and bed frames is our specialty. From design to execution, we tirelessly test all of our products to guarantee compliance with industry guidelines and the high standards of South Bay International. Whether you’re looking for a turnkey, private label or an innovative custom sleep solution, we’re there for you. Let's inspire better sleep, together!",
+        "image": "shopify:\/\/shop_images\/expertise-visual.png",
+        "button_text_1": "Explore<br> Our Products",
+        "button_url_1": "shopify:\/\/collections\/mattresses",
+        "button_text_2": "Innovate<br> with Us",
+        "button_url_2": "shopify:\/\/pages\/innovation"
+      }
+    },
+    "2812b6bd-c55b-4075-a7df-ee2861fe759e": {
+      "type": "index-single-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/home-only-visuals.png",
+        "vector_position": "none"
+      }
+    },
+    "b6813f1c-eef9-4d7e-8669-8cc41a0714b5": {
+      "type": "index-partners",
+      "settings": {
+        "heading": "<span>Your Partner<\/span> in<br> Innovation",
+        "text": "At South Bay International, we’re building better sleep brands. As one of the largest mattress and adjustable base factories in the world, we have the space to dream big. From pioneering the “Bed in a Box” concept to innovating the latest adjustable bases, partnering with us means you never have to miss out on zzz’s. We’ve got your customers’ backs as they rest upon our expertise.",
+        "image": "shopify:\/\/shop_images\/innovative-partner.png",
+        "image_1": "shopify:\/\/shop_images\/tab-image-1.png",
+        "button_text_1": "Explore<br> Our Products",
+        "button_url_1": "shopify:\/\/collections\/mattresses"
+      }
+    },
+    "d7d14eb1-fd42-41c1-a4c2-270723b01e12": {
+      "type": "index-single-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/home-visuals-2.png",
+        "vector_position": "left"
+      }
+    },
+    "a6b64fd8-713f-4e83-9a30-505fb68d4c1f": {
+      "type": "index-articles",
+      "settings": {
+        "heading": "<span>Your Partner<\/span> in<br> Innovation",
+        "blog": "news",
+        "button_text_1": "See All Blogs",
+        "button_url_1": "shopify:\/\/blogs\/news"
+      }
+    },
+    "d2c11093-e5e2-491f-9b8f-82e7faf48d2b": {
+      "type": "index-single-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/home-visuals-3.png",
+        "vector_position": "right"
+      }
+    },
+    "78bf8aac-faf1-4533-8607-949d8065e49e": {
+      "type": "index-sustainability",
+      "settings": {
+        "heading": "<span>Your Partner<\/span> in<br> Innovation",
+        "text": "At South Bay International, we’re building better sleep brands. As one of the largest mattress and adjustable base factories in the world, we have the space to dream big. From pioneering the “Bed in a Box” concept to innovating the latest adjustable bases, partnering with us means you never have to miss out on zzz’s. We’ve got your customers’ backs as they rest upon our expertise.",
+        "image": "shopify:\/\/shop_images\/sustainability.png",
+        "image_1": "shopify:\/\/shop_images\/tab-image-2.png",
+        "button_text_1": "Explore<br> Our Products",
+        "button_url_1": "shopify:\/\/collections\/mattresses"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "a2817e29-7da6-4f11-bef7-62f34c317c67",
+    "3c305731-5c6c-4cc4-908c-fc6c0be1ad1f",
+    "2812b6bd-c55b-4075-a7df-ee2861fe759e",
+    "b6813f1c-eef9-4d7e-8669-8cc41a0714b5",
+    "d7d14eb1-fd42-41c1-a4c2-270723b01e12",
+    "a6b64fd8-713f-4e83-9a30-505fb68d4c1f",
+    "d2c11093-e5e2-491f-9b8f-82e7faf48d2b",
+    "78bf8aac-faf1-4533-8607-949d8065e49e"
   ]
 }
