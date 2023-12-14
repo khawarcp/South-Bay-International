@@ -1,0 +1,51 @@
+<!-- Contact Media and Press -->
+<section class="home-partner media-and-press-contact section-padding">
+    <div class="d-flex a-start space-b flex-wrap media-and-press-contact-flex">
+        <div class="home-partner-child">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child">
+            <div class="section-bar-partners"></div>
+            <div class="press-and-media-main-data d-flex f-col space-b">
+                {% if section.settings.heading != blank %}
+                    <h2> {{ section.settings.heading }} </h2>                    
+                {% endif %}
+                {% if section.settings.email != blank %}
+                    <a class="media-and-press-link d-flex a-end"
+                        href="mailto:{{ section.settings.email }}">
+                        <img src="{{ 'email-icon.svg' | asset_url }}" alt="email-icon"> {{ section.settings.email }} </a>                    
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Media",        
+        "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Let’s Get</span> Dreaming"
+            },
+            {
+                "type": "text",
+                "id": "email",
+                "label": "Email",
+                "default": "media@southbayinternational.com"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Media"
+            }
+        ]
+    }
+{% endschema %}

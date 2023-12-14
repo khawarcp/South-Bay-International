@@ -3,7 +3,7 @@
     "page-banner": {
       "type": "page-banner",
       "settings": {
-        "heading": "Customize Your Sleep<br> Products with Us",
+        "heading": "<span class=\"heading-piece\">Customize Your Sleep<\/span><br> Products with Us",
         "image": "shopify:\/\/shop_images\/innovate-page-banner.png",
         "vector_position": "left"
       }
@@ -11,10 +11,65 @@
     "9deddde5-6278-4077-a254-0cc66ad3aaa9": {
       "type": "innovation-richtext-with-image",
       "settings": {
+        "heading": "<span>You’re in the Right<\/span><br> Company to Innovate",
+        "text": "At South Bay International, the sky is the limit when it comes to creating a more restful, rejuvenating night’s sleep. With our team of researchers and designers, you’re in the right company to innovate the sleeping solutions of your dreams.",
+        "image": "shopify:\/\/shop_images\/innovate-main-sec.png"
       }
     },
     "8e534aa8-a779-403f-b49a-0862a66eb6c7": {
       "type": "innovation-features",
+      "blocks": {
+        "2bbf8962-759e-427d-ba1d-694179925ce6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/light-bulb-icon.svg",
+            "text": "We create cutting-edge, technology-supported products and reserve award-winning patents to keep up with industry trends"
+          }
+        },
+        "83dfadc3-7509-4811-88ce-a4dd69b23e13": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yellow-search-icon.svg",
+            "text": "From raw materials to the finished product, we take ownership in every step of the manufacturing process for the highest quality control"
+          }
+        },
+        "2dbfd660-fe04-430e-ad9c-06754bc5db65": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-icon.svg",
+            "text": "We have one of the world’s largest mattress and adjustable base factories with 755,000+ square feet of warehouse space"
+          }
+        },
+        "e5acd5a1-fbe2-4a80-be2e-22044488b831": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/warehouse-icon.svg",
+            "text": "As your domestic mattress and vertically integrated adjustable base manufacturing partner, we offer nationwide B2B, B2C and DTC dropship capabilities"
+          }
+        },
+        "fda87326-53c2-4a10-b25c-ede42dc889f0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/truck-icon.svg",
+            "text": "Customer convenience is a priority, which is why we offer white glove delivery and in-home setup options and quick delivery via Fed-Ex or UPS"
+          }
+        },
+        "aa920caf-a64c-47a8-8e43-4a6ebd6d0e9d": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/handshake-icon.svg",
+            "text": "Our customers are our number one priority. We prioritize relationships through nationwide customer service and end-user support"
+          }
+        }
+      },
+      "block_order": [
+        "2bbf8962-759e-427d-ba1d-694179925ce6",
+        "83dfadc3-7509-4811-88ce-a4dd69b23e13",
+        "2dbfd660-fe04-430e-ad9c-06754bc5db65",
+        "e5acd5a1-fbe2-4a80-be2e-22044488b831",
+        "fda87326-53c2-4a10-b25c-ede42dc889f0",
+        "aa920caf-a64c-47a8-8e43-4a6ebd6d0e9d"
+      ],
       "settings": {
       }
     },
@@ -28,6 +83,11 @@
     "8c0ad9f9-c660-4f30-b826-126cda7aeecd": {
       "type": "innovation-form",
       "settings": {
+        "heading": "<span>Let’s Get<\/span> Dreaming",
+        "text": "Creating a better sleep product begins here! Fill out our form to get started",
+        "image": "shopify:\/\/shop_images\/innovate-form-image.png",
+        "show_accept_marketing": true,
+        "checkbox_text": "Opt in for South Bay International’s newsletter."
       }
     }
   },

@@ -5,13 +5,12 @@
     "custom-header": {
       "type": "custom-header",
       "settings": {
-        "header_logo": "shopify:\/\/shop_images\/southbay-header-logo.svg",
         "main_menu": "main-menu",
         "dealer_login": "Dealer Log In",
         "dealer_url": "#",
         "dealer_register": "Become A Dealer",
         "dealer_register_url": "#",
-        "contact_button": "Contact Us",
+        "contact_button": "Contact",
         "contact_button_url": "shopify:\/\/pages\/contact"
       }
     }

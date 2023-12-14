@@ -3,13 +3,15 @@
     <div class="d-flex space-b a-start flex-wrap">
         <div class="expertise-child">
             <div class="yellow-bar inner-div-bar"></div>
-            <h2><span>You’re in the Right</span><br> Company to Innovate </h2>
-            <p>At South Bay International, the sky is the limit when it comes to creating a more
-                restful, rejuvenating night’s sleep. With our team of researchers and designers, you’re
-                in the right company to innovate the sleeping solutions of your dreams.</p>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            {% if section.settings.text != blank %}
+                <p> {{ section.settings.text }} </p>
+            {% endif %}
         </div>
         <div class="expertise-child">
-            <img src="./assets/visuals/innovate-main-sec.png" alt="Expertise">
+            {% render 'image-snippet', image: section.settings.image %}
         </div>
     </div>
 </section>
@@ -18,7 +20,23 @@
     {
         "name": "Innovation Text",        
         "settings": [
-        
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "You’re in the Right</span><br> Company to Innovate"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "At South Bay International, the sky is the limit when it comes to creating a more restful, rejuvenating night’s sleep. With our team of researchers and designers, you’re in the right company to innovate the sleeping solutions of your dreams."
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            }
         ],
         "presets": [
             {
