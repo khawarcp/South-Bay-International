@@ -8,6 +8,7 @@
             {% endif %}
             <div class="contact-main-form-div">
                 {%- form 'contact', id: 'ContactForm' -%}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
                     {%- if form.posted_successfully? -%}
                         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
                             {% render 'icon-success' %}
@@ -93,7 +94,7 @@
                     {% if section.settings.show_accept_marketing %}                        
                         <div class="form-field-contact">
                             <label class="form-label-checkbox" for="agreement-click">
-                                <input class="form-checkbox-contact" type="checkbox"  id="agreement-click" name="customer[accepts_marketing]" value="{{ form.email }}">
+                                <input class="form-checkbox-contact" type="checkbox"  id="agreement-click" name="customer[accepts_marketing]" value="true">
                                 <span class="checkmark"></span>
                                 {{ section.settings.checkbox_text }}
                             </label>

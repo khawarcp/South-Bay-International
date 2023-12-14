@@ -2,8 +2,8 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "custom-header": {
-      "type": "custom-header",
+    "header": {
+      "type": "header",
       "settings": {
         "main_menu": "main-menu",
         "dealer_login": "Dealer Log In",
@@ -16,6 +16,6 @@
     }
   },
   "order": [
-    "custom-header"
+    "header"
   ]
 }
