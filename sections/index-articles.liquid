@@ -1,7 +1,8 @@
+
 <!-- Home Blogs -->
 <section class="home-blogs section-padding">
     <div class="container">
-        <div class="yellow-bar"></div>
+        <div class="yellow-bar"> </div>
         {% if section.settings.heading != blank %}
             <h2> {{ section.settings.heading }} </h2>                    
         {% endif %}
@@ -21,7 +22,7 @@
                 </div>
             {% endfor %}
         </div>
-        {% if section.settings.button_text_1 != blank %}                
+       {% if section.settings.button_text_1 != blank %}                
             <a class="primary-btn" href="{{ section.settings.button_url_1 | default : "#." }}"> {{ section.settings.button_text_1 }} </a>
         {% endif %}
     </div>
@@ -47,10 +48,10 @@
                 "type": "range",
                 "id": "no_articles",
                 "label": "Number of Articles",
-                "min": 3,
-                "max": 9,
-                "step": 3,
-                "default": 3
+                "min": 4,
+                "max": 12,
+                "step": 4,
+                "default": 4
             },
             {
                 "type": "text",

@@ -273,6 +273,8 @@
       }
     </script>
 
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
           <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'media.css' | asset_url }}">
@@ -355,25 +357,21 @@
     {% if template contains 'collection' %}
       <script src="{{ 'load-more-products.js'| asset_url }}" defer></script>
     {% endif %}
+     <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
 
+    <!-- Initialize Swiper -->
     <script>
-        const lenis = new Lenis({
-            duration: 3,
-            smoothWheel: true,
-            lerp: 0.8,
-            wrapper: window,
-        })
-
-        lenis.on('scroll', (e) => {
-            console.log(e)
-        })
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-        requestAnimationFrame(raf)
+        var swiper = new Swiper(".partner-swiper", {
+            direction: "vertical",
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     </script>
 
   </body>

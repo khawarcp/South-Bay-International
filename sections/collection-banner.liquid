@@ -1,7 +1,10 @@
+
 <!-- Product Hero Section -->
 <section class="product-hero-section">
-    <div class="container">
+    <div class="container d-flex a-center space-b">
         <h2 class="prodcut-hero-heading"> {{ collection.title }} </h2>
+        <a class="shop-back-all d-flex a-center" href="{{ routes.collections_url }}"><img class="shop-back-all-icon"
+                src="{{ 'back-icon.svg' | asset_url }}" alt="back-icon"> Shop All Categories</a>
     </div>
 </section>
 

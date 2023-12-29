@@ -1,18 +1,18 @@
 <!-- Home Only Visuals -->
-<section class="home-only-visuals" style="background-image: url({{ section.settings.image | image_url }});">
-    {% if section.settings.use_video %}      
-      {{
-            section.settings.video
-            | video_tag:              
-              autoplay: true,
-              loop: true,
-              controls: false,
-              muted: true,
-              playsinline: true,
-              class: 'background-video'
-          }}
+<section class="home-only-visuals">
+    <div class="home-first-sec-bg large-background-image  d-flex a-center jc-start"
+        style="background-image: url({{ section.settings.image | image_url }});">
+    </div>
+    {% if section.settings.image_1 != blank %}
+    <div class="home-first-sec-bg mobile-ipad-background-image  d-flex a-center jc-start"
+        style="background-image: url({{ section.settings.image_1 | image_url }});">
+    </div>
+    {% else %}
+     <div class="home-first-sec-bg large-background-image  d-flex a-center jc-start"
+          style="background-image: url({{ section.settings.image | image_url }});">
+      </div>
     {% endif %}
-    {% unless section.settings.vector_position == 'none' %}    
+  {% unless section.settings.vector_position == 'none' %}    
         {% if section.settings.vector_position == 'left' %}
             <div class="bottom-vector-global d-flex">
                 <img src="{{ 'bottom-vector.png'| asset_url }}" alt="bottom-vector">
@@ -26,28 +26,20 @@
     {% endunless %}
 </section>
 
-
-
 {% schema %}
-    {
-        "name": "Single Image",        
-        "settings": [
-            {
-              "type" : "checkbox",
-              "id" : "use_video",
-              "label" : "Use Video",
-              "default" : false
-            },
-            {
-                "type": "image_picker",
-                "id": "image",
-                "label": "Image"
-            },
-            {
-              "type": "video",
-              "id": "video",
-              "label": "Video"
-            },
+  {
+    "name": "Image",
+    "settings" : [
+          {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Desktop Image"
+          },
+          {
+              "type": "image_picker",
+              "id": "image_1",
+              "label": "Mobile Image"
+          },
             {
                 "type": "select",
                 "id": "vector_position",
@@ -68,11 +60,14 @@
                 ],
                 "default": "none"
             }
-        ],
+    ],
         "presets": [
             {
-                "name": "Single Image"
+                "name": "Image"
             }
         ]
-    }
+  }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}

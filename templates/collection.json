@@ -17,10 +17,61 @@
         "filter_type": "horizontal",
         "enable_sorting": false
       }
+    },
+    "60cb14f4-81ab-44e0-9311-854a64dc4de1": {
+      "type": "faqs",
+      "blocks": {
+        "129d57a5-3f44-4412-a14e-dc2c0defbc69": {
+          "type": "FAQ",
+          "settings": {
+            "quiz": "Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam consequuntur repellat voluptates recusandae esse iure sit assumenda unde corrupti quasi ducimus nisi molestias fugit, debitis ipsam natus ea rerum.<\/p>"
+          }
+        },
+        "a341acdd-8201-45ff-bd44-582e8391c350": {
+          "type": "FAQ",
+          "settings": {
+            "quiz": "Aliquam erat consectetuer adipiscing elitsed diam consect?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam consequuntur repellat voluptates recusandae esse iure sit assumenda unde corrupti quasi ducimus nisi molestias fugit, debitis ipsam natus ea rerum.<\/p>"
+          }
+        },
+        "3731b24a-c33e-4b2e-9d17-201e856e5b25": {
+          "type": "FAQ",
+          "settings": {
+            "quiz": "Consectetuer adipiscing elit adipised diam nsectetu?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam consequuntur repellat voluptates recusandae esse iure sit assumenda unde corrupti quasi ducimus nisi molestias fugit, debitis ipsam natus ea rerum.<\/p>"
+          }
+        },
+        "66629025-47ce-4ac0-9e87-fdeea3f03405": {
+          "type": "FAQ",
+          "settings": {
+            "quiz": "Secteer suscipit lobortis nisl ut aliquip ex ea commodo liquam erat consectetuer adipiscing elit, sed diam?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam consequuntur repellat voluptates recusandae esse iure sit assumenda unde corrupti quasi ducimus nisi molestias fugit, debitis ipsam natus ea rerum.<\/p>"
+          }
+        },
+        "df15f24c-4f1b-4be6-a604-4dd57bbb92b8": {
+          "type": "FAQ",
+          "settings": {
+            "quiz": "Aliquam erat consectetuer adipiscing elit, sed diam?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam consequuntur repellat voluptates recusandae esse iure sit assumenda unde corrupti quasi ducimus nisi molestias fugit, debitis ipsam natus ea rerum.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "129d57a5-3f44-4412-a14e-dc2c0defbc69",
+        "a341acdd-8201-45ff-bd44-582e8391c350",
+        "3731b24a-c33e-4b2e-9d17-201e856e5b25",
+        "66629025-47ce-4ac0-9e87-fdeea3f03405",
+        "df15f24c-4f1b-4be6-a604-4dd57bbb92b8"
+      ],
+      "settings": {
+        "heading": "FAQ"
+      }
     }
   },
   "order": [
     "collection-banner",
-    "product-grid"
+    "product-grid",
+    "60cb14f4-81ab-44e0-9311-854a64dc4de1"
   ]
 }

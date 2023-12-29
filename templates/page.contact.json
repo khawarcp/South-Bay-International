@@ -4,7 +4,10 @@
       "type": "page-banner",
       "settings": {
         "heading": "<span class=\"heading-piece\">Contact Us<\/span> to Keep <br> the Dream Alive ",
-        "image": "shopify:\/\/shop_images\/contact-banner.png",
+        "bg_image_1": "shopify:\/\/shop_images\/contact-large-bg.png",
+        "bg_image_2": "shopify:\/\/shop_images\/contact-desktop-bg.png",
+        "bg_image_3": "shopify:\/\/shop_images\/contact-tab-bg.png",
+        "bg_image_4": "shopify:\/\/shop_images\/contact-mobile-bg.png",
         "vector_position": "left"
       }
     },

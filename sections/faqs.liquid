@@ -1,0 +1,47 @@
+<!-- FAQs -->
+<section class="product-faqs section-padding {% if template.suffix == 'FAQs' %} product-faqs-padding {% endif %}">
+    <div class="container">
+        {% if section.settings.heading != blank %}
+        <h2 class="prodcut-hero-heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        <div class="faq-parent-container">
+            {% for faq in shop.metaobjects.faqs.values %}
+                  {% if faq.question.value != blank %}
+                      <div class="accordion-item">
+                          <button class="accordion-header d-flex a-center space-b">
+                              {{ faq.question.value }}
+                              <span class="accord-icon d-flex a-center"><img src="{{ 'faq-open.svg' | asset_url }}" alt="faq-open"></span>
+                          </button>
+                          <div class="accordion-content">
+                             <p> {{ faq.answers.value }}</p>
+                          </div>
+                      </div>
+                  {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "FAQs",
+    "settings": [
+           {
+            "type": "text",
+            "id" : "heading",
+            "label": "Heading"
+          }
+    ],
+    "presets": [
+      {
+        "name" : "FAQs"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

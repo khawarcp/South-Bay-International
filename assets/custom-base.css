@@ -8,6 +8,14 @@ p{
 }
 
 
+.product-faqs-padding {
+    padding-top: 208px;
+}
+
+.related-products li.grid__item .product-main-child {
+    max-width: 100%;
+}
+
 .load-more__spinner {
   display:none;
     height: 25px;
@@ -26,4 +34,9 @@ p{
        transform: rotate(0deg)
    } 
     100%{ transform: rotate(360deg)}
+}
+
+@media only screen and (max-width: 767px)
+.product-faqs-padding {
+    padding-top: 60px;
 }

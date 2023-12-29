@@ -1,12 +1,39 @@
+
 <!-- Global Hero Section -->
-<section class="home-hero-section d-flex a-center jc-start global-banner"
-    style="background-image: url({{ section.settings.image | image_url }});">
-    <div class="container">
-        <h1 class="home-hero-heading">
-         {{ section.settings.heading }}
-        </h1>
+<section class="home-hero-section global-banner">
+    <div class="home-first-sec-bg extra-background-image  d-flex a-center jc-start"
+        style="background-image: url({{ section.settings.bg_image_1 | image_url }});">
+        <div class="container">
+            <h1 class="home-hero-heading">
+                {{ section.settings.heading }}
+            </h1>
+        </div>
     </div>
-    {% unless section.settings.vector_position == 'none' %}    
+    <div class="home-first-sec-bg large-background-image  d-flex a-center jc-start"
+        style="background-image: url({{ section.settings.bg_image_2 | image_url }});">
+        <div class="container">
+            <h1 class="home-hero-heading">
+                {{ section.settings.heading }}
+            </h1>
+        </div>
+    </div>
+    <div class="home-first-sec-bg ipad-pro-background-image  d-flex a-center jc-start"
+        style="background-image: url({{ section.settings.bg_image_3 | image_url }});">
+        <div class="container">
+            <h1 class="home-hero-heading">
+                {{ section.settings.heading }}
+            </h1>
+        </div>
+    </div>
+    <div class="home-first-sec-bg mobile-ipad-background-image  d-flex a-center jc-start"
+        style="background-image: url({{ section.settings.bg_image_4 | image_url }});">
+        <div class="container">
+            <h1 class="home-hero-heading">
+                {{ section.settings.heading }}
+            </h1>
+        </div>
+    </div>
+   {% unless section.settings.vector_position == 'none' %}    
         {% if section.settings.vector_position == 'left' %}
             <div class="bottom-vector-global d-flex">
                 <img src="{{ 'bottom-vector.png'| asset_url }}" alt="bottom-vector">
@@ -30,10 +57,25 @@
                 "label": "Heading",
                 "default": "Customize Your Sleep</span><br> Products with Us"
             },
+             {
+                "type": "image_picker",
+                "id": "bg_image_1",
+                "label": "Large Image"
+            },
             {
                 "type": "image_picker",
-                "id": "image",
-                "label": "Image"
+                "id": "bg_image_2",
+                "label": "Desktop Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image_3",
+                "label": "Tab Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image_4",
+                "label": "Mobile Image"
             },
             {
                 "type": "select",

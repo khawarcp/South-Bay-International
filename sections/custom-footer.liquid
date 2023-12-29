@@ -1,24 +1,25 @@
-<footer id="footer">
-    <div class="bottom-vector-global bottom-vector-right footer-vector-only d-flex">
-        <img src="{{ 'last-section-bottom-vector.png' | asset_url }}" alt="last-section-bottom-vector">
-    </div>
-    {% if section.settings.scroll_top %}        
-        <a class="scroll-to-top d-flex a-center f-col" href="#">
+  <footer id="footer">
+      <div class="bottom-vector-global bottom-vector-right footer-vector-only d-flex">
+         <img src="{{ 'last-section-bottom-vector.png' | asset_url }}" alt="last-section-bottom-vector">
+      </div>
+      {% if section.settings.scroll_top %}        
+        <a class="scroll-to-top d-flex a-center f-col" href="#" id="scroll-top-l">
             <img src="{{ 'scroll-to-top.svg' | asset_url }}" alt="scroll-to-top">
             SCROLL TO TOP
         </a>
     {% endif %}
-    <div class="container">
-        <div class="top-footer d-flex flex-wrap a-start space-b">
-            {% if section.settings.footer_logo != blank %}                
-                <div class="top-footer-child">
-                    {%- assign logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
-                    <a class="footer-logo" href="{{ routes.root_url }}"><img src="{{ section.settings.footer_logo | image_url }}"  alt="{{ logo_alt }}"></a>
-                </div>
-            {% endif %}
-            <div class="top-footer-child">
-                <ul class="footer-menu d-flex f-col">
-                    {% if section.settings.dealer_register != blank %}
+      <div class="container">
+          <div class="top-footer d-flex flex-wrap a-start space-b">
+              <div class="top-footer-left d-flex flex-wrap a-start space-b">
+                  {% if section.settings.footer_logo != blank %}                
+                       <div class="top-footer-child">
+                          {%- assign logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
+                          <a class="footer-logo" href="{{ routes.root_url }}"><img src="{{ section.settings.footer_logo | image_url }}"  alt="{{ logo_alt }}"></a>
+                      </div>
+                  {% endif %}
+                  <div class="top-footer-child">
+                      <ul class="footer-menu d-flex f-col">
+                        {% if section.settings.dealer_register != blank %}
                         <li class="desktop-hidden-tab"><a href="{{ section.settings.dealer_register_url | default : "#." }}">{{ section.settings.dealer_register }}</a></li>
                     {% endif %}
                     {% if section.settings.dealer_login != blank %}                                        
@@ -27,61 +28,66 @@
                     {% for link in linklists[section.settings.footer_menu_1].links %}                        
                         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                     {% endfor %}
-                </ul>
-            </div>
-            <div class="top-footer-child">
-                <!-- <span class="footer-menu-heading">Support</span> -->
-                <ul class="footer-menu d-flex f-col">
-                    {% for link in linklists[section.settings.footer_menu_2].links %}                        
+                        
+                      </ul>
+                  </div>
+                  <div class="top-footer-child">
+                      <!-- <span class="footer-menu-heading">Support</span> -->
+                      <ul class="footer-menu d-flex f-col">
+                           {% for link in linklists[section.settings.footer_menu_2].links %}                        
                         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                     {% endfor %}
-                </ul>
-                <!-- <span class="footer-menu-heading space-top-add">Legal</span> -->
-                <!-- <ul class="footer-menu d-flex f-col">
-                  
-                </ul> -->
-            </div>
-            <div class="top-footer-child">
-                <!-- <span class="footer-menu-heading">Contact</span> -->
-                <ul class="footer-menu d-flex f-col footer-cta-links">
-                    {% if section.settings.email != blank %}
+                      </ul>
+                      <!-- <span class="footer-menu-heading space-top-add">Legal</span> -->
+                      <!-- <ul class="footer-menu d-flex f-col">
+                    
+                  </ul> -->
+                  </div>
+                  <div class="top-footer-child">
+                      <!-- <span class="footer-menu-heading">Contact</span> -->
+                      <ul class="footer-menu d-flex f-col footer-cta-links">
+                           {% if section.settings.email != blank %}
                         <li><a href="mailto:{{ section.settings.email }}"> {{ section.settings.email }} </a></li>                        
                     {% endif %}
                     {% if section.settings.phone != blank %}
                         <li><a href="tel:{{ section.settings.phone }}"> {{ section.settings.phone }} </a></li>                        
                     {% endif %}
-                </ul>
-                {% if section.settings.address != blank %}                    
+                      </ul>
+                     {% if section.settings.address != blank %}                    
                     <a class="space-top-add" href="javascript:void(0);"> {{ section.settings.address }} </a>
                 {% endif %}
-            </div>
-            <div class="top-footer-child dealer-footer-cta d-flex a-center space-b">
-            {% if section.settings.dealer_login != blank %}                
+                  </div>
+              </div>
+              <div class="top-footer-right">
+                  <div class="top-footer-child dealer-footer-cta d-flex a-center space-b">
+                     {% if section.settings.dealer_login != blank %}                
                 <a class="dealer-footer-link tab-hidden" href="{{ section.settings.dealer_url | default : "#." }}"> {{ section.settings.dealer_login }} </a>
             {% endif %}
             {% if section.settings.dealer_register != blank %}
                 <a href="{{ section.settings.dealer_register_url | default : "#." }}" class="primary-btn tab-hidden">{{ section.settings.dealer_register }}</a>
             {% endif %}
-            </div>
-        </div>
-        <div class="bottom-footer d-flex a-end jc-start">
-            <div class="footer-scoial-media">
-                <ul class="socail-ul d-flex a-end space-b">
-                    {% if settings.social_instagram_link %}
-                    <li><a href="{{ settings.social_instagram_link }}"><img src="{{ 'Instagram.svg' | asset_url }}" alt="Instagram"></a></li>
+                    
+                  </div>
+              </div>
+          </div>
+          <div class="bottom-footer d-flex a-end jc-start">
+              <div class="footer-scoial-media">
+                  <ul class="socail-ul d-flex a-end space-b">
+                     {% if settings.social_instagram_link %}
+                    <li><a target="_blank" href="{{ settings.social_instagram_link }}"><img src="{{ 'Instagram.svg' | asset_url }}" alt="Instagram"></a></li>
                     {% endif %}
                     {% if settings.social_linkedin_link %}
-                    <li><a href="{{ settings.social_linkedin_link }}"><img src="{{ 'LinkedIn.svg' | asset_url }}" alt="LinkedIn"></a></li>
+                    <li><a target="_blank" href="{{ settings.social_linkedin_link }}"><img src="{{ 'LinkedIn.svg' | asset_url }}" alt="LinkedIn"></a></li>
                     {% endif %}
                     {% if settings.social_youtube_link %}
-                    <li><a href="{{ settings.social_youtube_link }}"><img src="{{ 'YouTube.svg' | asset_url }}" alt="YouTube"></a></li>
+                    <li><a target="_blank" href="{{ settings.social_youtube_link }}"><img src="{{ 'YouTube.svg' | asset_url }}" alt="YouTube"></a></li>
                     {% endif %}
-                </ul>
-            </div>
-            <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</span>
-        </div>
-    </div>
-</footer>
+                  </ul>
+              </div>
+              <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</span>
+          </div>
+      </div>
+  </footer>
 
 {% schema %}
     {

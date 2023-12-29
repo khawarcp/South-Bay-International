@@ -4,7 +4,10 @@
       "type": "page-banner",
       "settings": {
         "heading": "<span class=\"heading-piece\">Customize Your Sleep<\/span><br> Products with Us",
-        "image": "shopify:\/\/shop_images\/innovate-page-banner.png",
+        "bg_image_1": "shopify:\/\/shop_images\/innovation-bg-large.png",
+        "bg_image_2": "shopify:\/\/shop_images\/innovation-bg-desktop.png",
+        "bg_image_3": "shopify:\/\/shop_images\/innovation-bg-tablet.png",
+        "bg_image_4": "shopify:\/\/shop_images\/innovation-bg-mobile.png",
         "vector_position": "left"
       }
     },
@@ -13,7 +16,7 @@
       "settings": {
         "heading": "<span>You’re in the Right<\/span><br> Company to Innovate",
         "text": "At South Bay International, the sky is the limit when it comes to creating a more restful, rejuvenating night’s sleep. With our team of researchers and designers, you’re in the right company to innovate the sleeping solutions of your dreams.",
-        "image": "shopify:\/\/shop_images\/innovate-main-sec.png"
+        "image": "shopify:\/\/shop_images\/innovation-company-visual.png"
       }
     },
     "8e534aa8-a779-403f-b49a-0862a66eb6c7": {
@@ -73,10 +76,11 @@
       "settings": {
       }
     },
-    "90b06920-b840-47aa-a459-143999a6a534": {
-      "type": "index-single-image",
+    "1d2cc6d9-f897-4236-b246-5eed65ee8d1e": {
+      "type": "index-only-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/innovation-visuals-only.png",
+        "image": "shopify:\/\/shop_images\/innovation-visuals-large.png",
+        "image_1": "shopify:\/\/shop_images\/innovation-visuals-tab.png",
         "vector_position": "right"
       }
     },
@@ -85,9 +89,11 @@
       "settings": {
         "heading": "<span>Let’s Get<\/span> Dreaming",
         "text": "Creating a better sleep product begins here! Fill out our form to get started",
-        "image": "shopify:\/\/shop_images\/innovate-form-image.png",
+        "image": "shopify:\/\/shop_images\/get-innovating.png",
         "show_accept_marketing": true,
-        "checkbox_text": "Opt in for South Bay International’s newsletter."
+        "checkbox_text": "Opt in for South Bay International’s newsletter.",
+        "message_body": "Tell Us What You’re Interested in Creating:",
+        "button_text": "Submit"
       }
     }
   },
@@ -95,7 +101,7 @@
     "page-banner",
     "9deddde5-6278-4077-a254-0cc66ad3aaa9",
     "8e534aa8-a779-403f-b49a-0862a66eb6c7",
-    "90b06920-b840-47aa-a459-143999a6a534",
+    "1d2cc6d9-f897-4236-b246-5eed65ee8d1e",
     "8c0ad9f9-c660-4f30-b826-126cda7aeecd"
   ]
 }

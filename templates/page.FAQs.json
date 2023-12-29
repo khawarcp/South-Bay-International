@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "faqs": {
+      "type": "faqs",
+      "blocks": {
+        "00abab3e-f1e0-420d-b589-3000b0aac121": {
+          "type": "FAQ",
+          "settings": {
+            "quiz": "Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam consequuntur repellat voluptates recusandae esse iure sit assumenda unde corrupti quasi ducimus nisi molestias fugit, debitis ipsam natus ea rerum.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "00abab3e-f1e0-420d-b589-3000b0aac121"
+      ],
+      "settings": {
+        "heading": "FAQ"
+      }
+    }
+  },
+  "order": [
+    "faqs"
+  ]
+}

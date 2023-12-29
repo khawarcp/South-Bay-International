@@ -9,6 +9,7 @@
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'product-description-tabbing.css' | asset_url | stylesheet_tag }}
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
@@ -29,6 +30,7 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-description-tabbing.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
@@ -65,6 +67,30 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
+
+      <!-- HTML DESCRIPTION TABBING -->
+      {% comment %} <div class="tab" id="tabSet1">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div> {% endcomment %}
+    <!-- HTML DESCRIPTION TABBING END-->
+      
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <product-info
@@ -406,7 +432,34 @@
                 block: block,
                 share_link: share_url
               %}
+            {%- when 'social_media' -%}
 
+            {%- liquid
+              assign has_social_icons = true
+              if settings.social_facebook_link == blank and settings.social_twitter_link == blank and  settings.social_linkedin_link == blank
+                assign has_social_icons = false
+              endif
+            -%}
+            {% if has_social_icons %}
+            <div class="product-social-media">
+                <ul class="product-sm-items">
+                  {% if block.settings.email_address != blank %}
+                  <li class="product-sm-items"> <a href="mailto:{{ block.settings.email_address }}" class="product-sm-item-link"> {% render 'product-sm-email-icon' %} </a> </li>
+                  {% endif %}
+                  {% if settings.social_linkedin_link != blank %}
+                  <li class="product-sm-items"> <a href="{{ settings.social_linkedin_link }}" class="product-sm-item-link"> {% render 'product-sm-linkedIn-icon' %} </a> </li>
+                  {% endif %}
+                  {% if settings.social_facebook_link != blank %}
+                  <li class="product-sm-items"> <a href="{{ settings.social_facebook_link }}" class="product-sm-item-link"> {% render 'product-sm-fb-icon' %} </a> </li>
+                  {% endif %}
+                  {% if settings.social_twitter_link != blank %}
+                  <li class="product-sm-items"> <a href="{{ settings.social_twitter_link }}" class="product-sm-item-link"> {% render 'product-sm-tw-icon' %} </a> </li>
+                  {% endif %}
+                </ul>
+            </div>
+              
+            {% endif %}
+              
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'buy_buttons' -%}
@@ -544,6 +597,30 @@
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
       <div class="grid__item product__media-wrapper small-hide">
         {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}
+
+        <!-- HTML DESCRIPTION TABBING -->
+     {% comment %} <div class="tab" id="tabSet2">
+  <button class="tablinks" onclick="openCity(event, 'NewYork')">New York</button>
+  <button class="tablinks" onclick="openCity(event, 'Berlin')">Berlin</button>
+  <button class="tablinks" onclick="openCity(event, 'Beijing')">Beijing</button>
+</div>
+
+<div id="NewYork" class="tabcontent">
+  <h3>New York</h3>
+  <p>New York is a city in the United States.</p>
+</div>
+
+<div id="Berlin" class="tabcontent">
+  <h3>Berlin</h3>
+  <p>Berlin is the capital of Germany.</p> 
+</div>
+
+<div id="Beijing" class="tabcontent">
+  <h3>Beijing</h3>
+  <p>Beijing is the capital of China.</p>
+</div> {% endcomment %}
+    <!-- HTML DESCRIPTION TABBING END-->
+        
       </div>
     {%- endif -%}
   </div>
@@ -1110,6 +1187,19 @@
         {
           "type": "paragraph",
           "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
+        }
+      ]
+    },
+    {
+      "type": "social_media",
+      "name": "Social Media",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "email_address",
+          "default": "info@southbayinternational.com",
+          "label": "Email Address"
         }
       ]
     },
