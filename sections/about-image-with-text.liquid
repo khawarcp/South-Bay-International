@@ -1,0 +1,100 @@
+<!-- Home Sustainability -->
+<section class="home-partner about-innovation home-sustainability section-padding">
+    <div class="flex-custom d-flex space-b flex-wrap f-row-reverse">
+        <div class="home-partner-child tab-hidden-images about-innovation-child">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child about-innovation-child">
+            <div class="section-bar-partners"> </div>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            {% render 'image-snippet', image: section.settings.image_1, class: 'desktop-hidden-images' %}
+            {% if section.settings.text != blank %}
+                <p> {{ section.settings.text }} </p>
+            {% endif %}
+            {% if section.settings.button_text_1 != blank %}                
+                <a class="primary-btn tab-hidden" href="{{ section.settings.button_url_1 | default : "#." }}"> {{ section.settings.button_text_1 }} </a>
+            {% endif %}
+            <div class="about-tablet-btn desktop-hidden-tab">
+                {% if section.settings.mobile_text_1 != blank %}                
+                    <a class="primary-btn" href="{{ section.settings.mobile_url_1 | default : "#." }}"> {{ section.settings.mobile_text_1 }} </a>
+                {% endif %}
+                {% if section.settings.mobile_text_2 != blank %}                
+                    <a class="secondary-btn" href="{{ section.settings.mobile_url_2 | default : "#." }}"> {{ section.settings.mobile_text_2 }} </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "About Image With Text",
+    "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Innovation is a Ten-Letter Word.</span> So Is Rejuvenate."
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_1",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "button_text_1",
+                "label": "Button Text",
+                "default": "Unlock the Possibilities"
+            },
+            {
+                "type": "url",
+                "id": "button_url_1",
+                "label": "Button URL"
+            },
+            {
+                "type": "header",
+                "content": "Mobile Buttons"
+            },
+            {
+                "type": "text",
+                "id": "mobile_text_1",
+                "label": "Button Text",
+                "default": "Explore Our Products"
+            },
+            {
+                "type": "url",
+                "id": "mobile_url_1",
+                "label": "Button Link"
+            },
+            {
+                "type": "text",
+                "id": "mobile_text_2",
+                "label": "Button Text",
+                "default": "Innovate with Us"
+            },
+            {
+                "type": "url",
+                "id": "mobile_url_2",
+                "label": "Button Link"
+            }
+        ],
+    "presets": [
+        {
+            "name": "About Image With Text"
+        }
+    ]
+}
+{% endschema %}

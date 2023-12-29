@@ -1,0 +1,36 @@
+<section class="about-team-image">
+    <div class="about-team-bg desk-large" style="background-image: url({{ section.settings.bg_image_1 | image_url }});"> </div>
+    <div class="about-team-bg desk-small" style="background-image: url({{ section.settings.bg_image_2 | image_url }});"> </div>
+    <div class="about-team-bg mobile-data" style="background-image: url({{ section.settings.bg_image_3 | image_url }});"> </div>
+    <div class="about-vec">
+        <img src="{{ 'left-vec.png' | asset_url }}" alt="left-vec">
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "About Image",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "bg_image_1",
+            "label": "Desktop Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_image_2",
+            "label": "Tab Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_image_3",
+            "label": "Mobile Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "About Image"
+        }
+    ]
+}
+{% endschema %}

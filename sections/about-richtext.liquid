@@ -1,0 +1,55 @@
+<section class="about-backed-section">
+    <div class="container">
+        <div class="about-backed-main">
+            <div class="about-backed-content">                
+                {% if section.settings.text != blank %}
+                    <h3> {{ section.settings.text }} </h3>                    
+                {% endif %}
+                {% if section.settings.heading != blank %}
+                    <p> {{ section.settings.heading }} </p>
+                {% endif %}
+                <div class="about-backed-link">
+                    {% if section.settings.button_text_1 != blank %}                
+                        <a class="primary-btn" href="{{ section.settings.button_url_1 | default : "#." }}"> {{ section.settings.button_text_1 }} </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "About Richtext",
+        "settings": [
+            {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "– CEO Toby Konetzny"
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "“Backed by extensive research and development, South Bay International consistently takes decisive actions to transform the sleep business with new and innovative products. We aspire to be an integral collaborator for our clients, one who is deeply woven into their business operations and provides top-tier products, comprehensive service and seamless logistics support.”"
+                },
+                {
+                    "type": "text",
+                    "id": "button_text_1",
+                    "label": "Button Text",
+                    "default": "Let’s Innovate"
+                },
+                {
+                    "type": "url",
+                    "id": "button_url_1",
+                    "label": "Button URL"
+                }
+        ],
+        "presets": [
+            {
+                "name": "About Richtext"
+            }
+        ]
+    }
+    {% endschema %}

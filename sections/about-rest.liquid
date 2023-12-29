@@ -1,0 +1,57 @@
+<section class="home-partner section-padding about-rest">
+    <div class="container">
+        <div class="flex-custom d-flex space-b flex-wrap f-row-reverse">
+            <div class="home-partner-child tab-hidden-images about-rest-child">
+                {% render 'image-snippet', image: section.settings.image %}
+            </div>
+            <div class="home-partner-child about-rest-child">
+                <div class="section-bar-partners"></div>
+                {% if section.settings.heading != blank %}
+                    <h2> {{ section.settings.heading }} </h2>                    
+                {% endif %}
+                <div class="home-partner-child desktop-hidden-images">
+                    {% render 'image-snippet', image: section.settings.image_1 %}
+                </div>
+                <!-- <img class="desktop-hidden-images" src="./assets/visuals/tab-image-1.png" alt="*"> -->
+                {% if section.settings.richttext != blank %}
+                    {{ section.settings.richttext }}
+               {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Rest",
+        "settings": [
+            {
+                    "type": "html",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "<span>Nothing Like </span> the Rest"
+                },
+                {
+                    "type": "richtext",
+                    "id": "richttext",
+                    "label": "Text",
+                    "default": "<p>South Bay International is equipped to handle all aspects of the business cycle: product development, dealer assortments, warehousing, dropshipping and consumer calls. Here’s how you can get into the dream stage and onto delivery with us.</p>"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_1",
+                    "label": "Image"
+                }
+        ],
+        "presets": [
+            {
+                "name" : "Rest"
+            }
+        ]
+    }
+    {% endschema %}

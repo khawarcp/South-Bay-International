@@ -1,0 +1,79 @@
+<section class="research-chart-section">
+    <div class="container">
+        <div class="research-chart-main">
+            <div class="research-chart-image-container">
+                <div class="desk-large">
+                    {% render 'image-snippet', image: section.settings.bg_image_1 %}
+                </div>
+                <div class="desk-small">
+                    {% render 'image-snippet', image: section.settings.bg_image_2 %}
+                </div>
+                <div class="tablet-data">
+                    {% render 'image-snippet', image: section.settings.bg_image_3 %}
+                </div>
+                <div class="mobile-data">
+                    <div class="research-chart-data">
+                        {% for block in section.blocks %}
+                            {% case block.type %}
+                                {% when 'text_item' %}
+                                    <div class="research-chart-row">
+                                        <h6> {{ block.settings.heading }} </h6>
+                                        <p> {{ block.settings.text }} </p>
+                                    </div>
+                            {% endcase %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Chart",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "bg_image_1",
+            "label": "Desktop Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_image_2",
+            "label": "Tab Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_image_3",
+            "label": "Mobile Image"
+        }
+    ],
+        "blocks": [
+        {
+            "type": "text_item",
+            "name": "Text Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "Research and Design"
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "An ever-evolving and agile team identifies and targets market trends"
+                }
+            ]
+        }
+    ],
+        "presets": [
+            {
+                "name" : "Chart"
+            }
+        ]
+    }
+    {% endschema %}

@@ -1,0 +1,181 @@
+{
+  "sections": {
+    "page-banner": {
+      "type": "page-banner",
+      "settings": {
+        "heading": "<span class=\"heading-piece\">A Global OEM<\/span> <br> That Offers You More",
+        "bg_image_1": "shopify:\/\/shop_images\/about-large-bg.png",
+        "bg_image_2": "shopify:\/\/shop_images\/about-desktop-bg.png",
+        "bg_image_3": "shopify:\/\/shop_images\/about-tablet-bg.png",
+        "bg_image_4": "shopify:\/\/shop_images\/about-tablet-bg.png",
+        "vector_position": "left"
+      }
+    },
+    "0c225831-13a0-41ad-aa3c-f9ee8530596d": {
+      "type": "about-image-with-text",
+      "settings": {
+        "heading": "<span>Innovation is a Ten-Letter Word.<\/span> So Is Rejuvenate.",
+        "text": "Great sleep is the gateway to greater health and we give clients the key. We’re committed to unwavering quality, sustainable manufacturing practices and continuous innovation to rejuvenate people's health and well-being. When we opened our doors in 1993, nearly 11,000 sleeps ago, we dreamed that we’d get to where we are today. Now as the premier domestic mattress manufacturer with one of the largest adjustable base factories in the world, we’re your partner in creating the best sleep products on the market.",
+        "image": "shopify:\/\/shop_images\/Rejuvenate.png",
+        "image_1": "shopify:\/\/shop_images\/Rejuvenate.png",
+        "button_text_1": "Unlock the Possibilities",
+        "button_url_1": "#",
+        "mobile_text_1": "Explore Our Products",
+        "mobile_url_1": "shopify:\/\/collections\/mattresses",
+        "mobile_text_2": "Innovate with Us",
+        "mobile_url_2": "shopify:\/\/pages\/innovation"
+      }
+    },
+    "b0528ff8-1517-4854-bb9e-3bfe9e128e2b": {
+      "type": "index-single-image",
+      "settings": {
+        "use_video": true,
+        "video": "shopify:\/\/files\/videos\/background-video.mp4",
+        "vector_position": "right"
+      }
+    },
+    "3ff2a13e-9a1e-471e-b65a-02be61087837": {
+      "type": "about-dedication-with-features",
+      "blocks": {
+        "07d9d25b-8cae-481d-a671-b2f9b12fe9a8": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Relationships",
+            "text": "Our talented team and industry-leading clients comprise the very foundation that we’re built upon. We attract the brightest in the industry, the ones that know lasting innovation is never bred from exhaustion but rejuvenation."
+          }
+        },
+        "70e2c950-76f3-4cf5-bc5f-9431d57ffc2e": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Expertise",
+            "text": "Through strong partnerships and industry knowledge, we dream and deliver quality, life-changing products. Our innovative materials and processes maintain the highest standards of clean, eco-friendly manufacturing and distribution to prioritize our planet and keep clients ahead."
+          }
+        },
+        "0d8867a9-d3a5-4f93-84b8-616e61b1aefe": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Mission",
+            "text": "We’re on a mission to craft sleep products that transform lives. This is at the root of everything we do, guiding each aspect of our process–from our in-house product development team to our helpful customer service."
+          }
+        }
+      },
+      "block_order": [
+        "07d9d25b-8cae-481d-a671-b2f9b12fe9a8",
+        "70e2c950-76f3-4cf5-bc5f-9431d57ffc2e",
+        "0d8867a9-d3a5-4f93-84b8-616e61b1aefe"
+      ],
+      "settings": {
+        "heading": "<span>Dedicated to the <\/span> Dream.",
+        "richttext": "<p>REM Sleep is the primary dreaming stage, a point which generally lasts about two hours each night and plays an important role in memory consolidation, emotional processing and brain development. At this point, your body is relaxed, your brain is highly active and your dreams are likely at their most vivid. Here at South Bay International, we run on <b>REM – Relationships, Expertise and Mission.<\/b><\/p>",
+        "image": "shopify:\/\/shop_images\/dedicated.png",
+        "image_1": "shopify:\/\/shop_images\/dedicated.png"
+      }
+    },
+    "bf63275b-7630-45e8-9da5-a5b1e5f84f59": {
+      "type": "about-hero-image",
+      "settings": {
+        "bg_image_1": "shopify:\/\/shop_images\/team-bg.png",
+        "bg_image_2": "shopify:\/\/shop_images\/team-tab.png",
+        "bg_image_3": "shopify:\/\/shop_images\/team-mobile.png"
+      }
+    },
+    "25620398-09fd-46a8-adfb-cac14f0efb9e": {
+      "type": "about-rest",
+      "settings": {
+        "heading": "<span>Nothing Like <\/span> the Rest",
+        "richttext": "<p>South Bay International is equipped to handle all aspects of the business cycle: product development, dealer assortments, warehousing, dropshipping and consumer calls. Here’s how you can get into the dream stage and onto delivery with us.<\/p>",
+        "image": "shopify:\/\/shop_images\/rest-image-desktop.png",
+        "image_1": "shopify:\/\/shop_images\/rest-image-tablet.png"
+      }
+    },
+    "4d4faa06-635f-4d3d-92df-5eb5111572e0": {
+      "type": "about-chart",
+      "blocks": {
+        "1246a249-5ed1-4a44-8d51-1b3dd3ccb05f": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Research and Design",
+            "text": "An ever-evolving and agile team identifies and targets market trends"
+          }
+        },
+        "7af86f92-cb32-4ef4-a176-2832883d013c": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Manufacturing",
+            "text": "It starts with patents and cutting-edge technologies and ends with rigorous testing and certifications"
+          }
+        },
+        "eb9733cc-be17-477b-a502-9fe972ec0384": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Distribution",
+            "text": "775,000 square feet of warehouse space and no MOQs gives you freedom, flexibility and opportunity"
+          }
+        },
+        "7004a7da-3d1f-4498-9844-9e5f6bbb1a3e": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Order Processing",
+            "text": "Orders are processed Monday through Friday, and shipped the same day if the complete order is received before 11:00 AM PST"
+          }
+        },
+        "5908e370-aea1-4687-89ad-43f8d63f6506": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Shipping",
+            "text": "Dropship FedEx, White Glove and Freight Forwarding options are available"
+          }
+        },
+        "458da350-6bd1-4f06-92df-932e494d46c7": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Support",
+            "text": "Our friendly customer service staff is trained to help our customers in every detail of our products"
+          }
+        }
+      },
+      "block_order": [
+        "1246a249-5ed1-4a44-8d51-1b3dd3ccb05f",
+        "7af86f92-cb32-4ef4-a176-2832883d013c",
+        "eb9733cc-be17-477b-a502-9fe972ec0384",
+        "7004a7da-3d1f-4498-9844-9e5f6bbb1a3e",
+        "5908e370-aea1-4687-89ad-43f8d63f6506",
+        "458da350-6bd1-4f06-92df-932e494d46c7"
+      ],
+      "settings": {
+        "bg_image_1": "shopify:\/\/shop_images\/chart-large.png",
+        "bg_image_2": "shopify:\/\/shop_images\/chart-desktop.png",
+        "bg_image_3": "shopify:\/\/shop_images\/chart-ipad.png"
+      }
+    },
+    "7a51bd70-012b-4fa6-81af-b22065c0ab9f": {
+      "type": "about-image-with-text2",
+      "settings": {
+        "heading": "<span>Leading the Charge <\/span> for Better Sleep Brands",
+        "text": "An industry veteran with over two decades of experience, our CEO Toby Konetzny stands behind innovation, value, quality and, of course, a great night’s sleep.",
+        "image": "shopify:\/\/shop_images\/leading.png",
+        "image_1": "shopify:\/\/shop_images\/leading.png"
+      }
+    },
+    "85570eb1-1133-4753-b99f-9207480a573e": {
+      "type": "about-richtext",
+      "settings": {
+        "heading": "– CEO Toby Konetzny",
+        "text": "“Backed by extensive research and development, South Bay International consistently takes decisive actions to transform the sleep business with new and innovative products. We aspire to be an integral collaborator for our clients, one who is deeply woven into their business operations and provides top-tier products, comprehensive service and seamless logistics support.”",
+        "button_text_1": "Let’s Innovate",
+        "button_url_1": "shopify:\/\/pages\/innovation"
+      }
+    }
+  },
+  "order": [
+    "page-banner",
+    "0c225831-13a0-41ad-aa3c-f9ee8530596d",
+    "b0528ff8-1517-4854-bb9e-3bfe9e128e2b",
+    "3ff2a13e-9a1e-471e-b65a-02be61087837",
+    "bf63275b-7630-45e8-9da5-a5b1e5f84f59",
+    "25620398-09fd-46a8-adfb-cac14f0efb9e",
+    "4d4faa06-635f-4d3d-92df-5eb5111572e0",
+    "7a51bd70-012b-4fa6-81af-b22065c0ab9f",
+    "85570eb1-1133-4753-b99f-9207480a573e"
+  ]
+}

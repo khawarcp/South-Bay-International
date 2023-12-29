@@ -16,6 +16,10 @@ p{
     max-width: 100%;
 }
 
+.about-dedicated-child p b {
+    color: #0C2340;
+}
+
 .load-more__spinner {
   display:none;
     height: 25px;

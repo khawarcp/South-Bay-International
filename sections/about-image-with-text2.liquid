@@ -1,0 +1,55 @@
+<section class="home-partner section-padding about-leading">
+    <div class="flex-custom d-flex space-b flex-wrap">
+        <div class="home-partner-child tab-hidden-images about-leading-child">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child about-leading-child">
+            <div class="section-bar-partners"></div>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            <div class="home-partner-child desktop-hidden-images">
+               {% render 'image-snippet', image: section.settings.image_1 %}
+            </div>
+            {% if section.settings.text != blank %}
+                <p> {{ section.settings.text }} </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "About Image with text 2",
+    "settings": [
+        {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Leading the Charge </span> for Better Sleep Brands"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "An industry veteran with over two decades of experience, our CEO Toby Konetzny stands behind innovation, value, quality and, of course, a great night’s sleep."
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_1",
+                "label": "Image"
+            }    
+    ],
+    "presets": [
+        {
+            "name": "About Image with text 2"
+        }
+    ]
+}
+{% endschema %}

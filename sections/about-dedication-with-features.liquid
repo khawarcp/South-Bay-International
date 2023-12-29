@@ -1,0 +1,91 @@
+<section class="home-partner section-padding about-dedicated">
+    <div class="flex-custom d-flex space-b flex-wrap">
+        <div class="home-partner-child tab-hidden-images about-dedicated-child">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child about-dedicated-child">
+            <div class="section-bar-partners"> </div>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            <div class="home-partner-child desktop-hidden-images">
+                {% render 'image-snippet', image: section.settings.image_1 %}
+            </div>
+            <!-- <img class="desktop-hidden-images" src="./assets/visuals/tab-image-1.png" alt="*"> -->
+            {% if section.settings.richttext != blank %}
+                 {{ section.settings.richttext }}
+            {% endif %}
+        </div>
+    </div>
+    <div class="relation-mission-container">
+        <div class="container">
+            <div class="relation-flex d-flex space-b flex-wrap">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'text_item' %}
+                            <div class="relation-single">
+                                <h2> {{ block.settings.heading }} </h2>
+                                <p> {{ block.settings.text }} </p>
+                            </div>
+                    {% endcase %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Dedication",
+    "settings": [
+        {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Dedicated to the </span> Dream."
+            },
+            {
+                "type": "richtext",
+                "id": "richttext",
+                "label": "Text",
+                "default": "<p>REM Sleep is the primary dreaming stage, a point which generally lasts about two hours each night and plays an important role in memory consolidation, emotional processing and brain development. At this point, your body is relaxed, your brain is highly active and your dreams are likely at their most vivid. Here at South Bay International, we run on <b>REM – Relationships, Expertise and Mission.</b></p>"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_1",
+                "label": "Image"
+            }
+    ],
+    "blocks": [
+    {
+        "type": "text_item",
+        "name": "Text Item",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Relationships"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "Our talented team and industry-leading clients comprise the very foundation that we’re built upon. We attract the brightest in the industry, the ones that know lasting innovation is never bred from exhaustion but rejuvenation."
+            }
+        ]
+    }
+],
+    "presets": [
+        {
+            "name" : "Dedication"
+        }
+    ]
+}
+{% endschema %}

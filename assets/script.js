@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var header = document.getElementById("header");
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 100) {
       header.classList.add("header-active");
     } else {
       header.classList.remove("header-active");
@@ -24,10 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   var searchToggle = document.getElementById("search-toggle");
   var searchBox = document.getElementById("search-click");
+  var searchOverlay = document.getElementById("wrapper");
 
   searchToggle.addEventListener("click", function (event) {
     searchBox.classList.toggle("show-search");
     searchToggle.classList.toggle("search-icon-choose");
+    searchOverlay.classList.toggle("search-overlay");
   });
 });
 
@@ -69,3 +71,11 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
     });
   });
 });
+
+
+
+
+function numberOnly(id) {
+  var element = document.getElementById(id);
+  element.value = element.value.replace(/[^0-9]/gi, "");
+}
