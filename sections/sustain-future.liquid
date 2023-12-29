@@ -1,10 +1,10 @@
-<section class="home-partner section-padding about-rest">
+<section class="home-partner section-padding sustainable-future-section">
     <div class="container">
-        <div class="flex-custom d-flex space-b flex-wrap f-row-reverse">
-            <div class="home-partner-child tab-hidden-images about-rest-child">
+        <div class="flex-custom d-flex space-b flex-wrap">
+            <div class="home-partner-child tab-hidden-images sustainable-future-child">
                 {% render 'image-snippet', image: section.settings.image %}
             </div>
-            <div class="home-partner-child about-rest-child">
+            <div class="home-partner-child sustainable-future-child">
                 <div class="section-bar-partners"> </div>
                 {% if section.settings.heading != blank %}
                     <h2> {{ section.settings.heading }} </h2>                    
@@ -12,10 +12,9 @@
                 <div class="home-partner-child desktop-hidden-images">
                     {% render 'image-snippet', image: section.settings.image_1 %}
                 </div>
-                <!-- <img class="desktop-hidden-images" src="./assets/visuals/tab-image-1.png" alt="*"> -->
-                {% if section.settings.richttext != blank %}
-                    {{ section.settings.richttext }}
-               {% endif %}
+                {% if section.settings.text != blank %}
+                    <p> {{ section.settings.text }} </p>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -23,19 +22,19 @@
 
 {% schema %}
     {
-        "name": "Rest",
+        "name": "Sustainable Future",
         "settings": [
             {
                     "type": "html",
                     "id": "heading",
                     "label": "Heading",
-                    "default": "<span>Nothing Like </span> the Rest"
+                    "default": "<span>Manufacturing a More </span> Sustainable Future"
                 },
                 {
-                    "type": "richtext",
-                    "id": "richttext",
+                    "type": "inline_richtext",
+                    "id": "text",
                     "label": "Text",
-                    "default": "<p>South Bay International is equipped to handle all aspects of the business cycle: product development, dealer assortments, warehousing, dropshipping and consumer calls. Here’s how you can get into the dream stage and onto delivery with us.</p>"
+                    "default": "We’re committed to sustainability across the globe. Our dreams for a more sustainable future include striving to move to 80% recycled metal for springs and adjustable bases, adding two additional shipping hubs in the United States to further reduce our carbon footprint and replacing 10% of foam materials with natural resources. We’re focused on setting standards that make our future bright."
                 },
                 {
                     "type": "image_picker",
@@ -46,11 +45,11 @@
                     "type": "image_picker",
                     "id": "image_1",
                     "label": "Image"
-                }
+                }    
         ],
         "presets": [
             {
-                "name" : "Rest"
+                "name": "Sustainable Future"
             }
         ]
     }

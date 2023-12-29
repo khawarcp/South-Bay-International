@@ -1,0 +1,55 @@
+<section class="home-partner section-padding community-giving">
+    <div class="flex-custom d-flex space-b flex-wrap f-row-reverse">
+        <div class="home-partner-child tab-hidden-images community-giving-child">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child community-giving-child">
+            <div class="section-bar-partners"> </div>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            <div class="home-partner-child desktop-hidden-images">
+                {% render 'image-snippet', image: section.settings.image_1 %}
+            </div>
+            <!-- <img class="desktop-hidden-images" src="./assets/visuals/tab-image-1.png" alt="*"> -->
+            {% if section.settings.text != blank %}
+                <p> {{ section.settings.text }} </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Community",
+        "settings": [
+            {
+                    "type": "html",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "<span>Giving Back to the </span> Community"
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "We believe that small actions lead to significant, collective change."
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_1",
+                    "label": "Image"
+                }    
+        ],
+        "presets": [
+            {
+                "name": "Community"
+            }
+        ]
+    }
+    {% endschema %}

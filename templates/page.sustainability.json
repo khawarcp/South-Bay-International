@@ -1,0 +1,157 @@
+{
+  "sections": {
+    "page-banner": {
+      "type": "page-banner",
+      "settings": {
+        "heading": "<span class=\"heading-piece\">Sleep Soundly with<\/span> <br> Sustainable Practices",
+        "bg_image_1": "shopify:\/\/shop_images\/sustainability-large.png",
+        "bg_image_2": "shopify:\/\/shop_images\/sustainability-desktop.png",
+        "bg_image_3": "shopify:\/\/shop_images\/sustainbility-tablet.png",
+        "bg_image_4": "shopify:\/\/shop_images\/sustainability-mobile.png",
+        "vector_position": "left"
+      }
+    },
+    "ae337ead-7bda-4c0c-bd20-c4fddabc7efa": {
+      "type": "sustain-image-with-text",
+      "settings": {
+        "heading": "<span>Restful. Resourceful.<\/span> Responsible.",
+        "text": "As an influential OEM in the mattress, bedding and better sleep product space, we hold a responsibility to create a better future. We don’t take this responsibility lightly, instead we’re paving the way for positive change in the mattress industry.",
+        "image": "shopify:\/\/shop_images\/restful.png",
+        "image_1": "shopify:\/\/shop_images\/restful.png"
+      }
+    },
+    "1b81f85c-868f-4d0e-8032-67589d5e0203": {
+      "type": "sustain-rest",
+      "blocks": {
+        "fdce7ad8-c8a2-4ecf-92b5-99d6d4374a19": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Products",
+            "text": "Our patented designs increase product durability and create less waste.",
+            "features": "<ul>\n                            <li>\n                                <p>Reduced plastic wrap around mattresses and packaging to increase product loadability <\/p>\n                            <\/li>\n                            <li>\n                                <p>Incorporated glueless springs, recycled metal springs, recycled PE and polyesters <\/p>\n                            <\/li>\n                            <li>\n                                <p>Utilized replaceable components to extend the life of products and lessen landfill waste <\/p>\n                            <\/li>\n                        <\/ul>"
+          }
+        },
+        "8b4aa731-793e-4232-9935-848b27977123": {
+          "type": "text_item",
+          "settings": {
+            "heading": "Facilities",
+            "text": "Bettering the planet influences how we operate at our facilities worldwide.",
+            "features": "<ul>\n                            <li>\n                                <p>In the US - Timers and motion sensor auto shut-off for lights, fans and outlets in the office and warehouse<\/p>\n                            <\/li>\n                            <li>\n                                <p>Multiple shipping hubs around the US to reduce carbon footprint <\/p>\n                            <\/li>\n                            <li>\n                                <p>In China - Invested 2.782 million yuan in environmental protection and use solar panels to save the equivalent of 6 tons of energy<\/p>\n                            <\/li>\n                        <\/ul>"
+          }
+        },
+        "2c8c5922-21aa-4453-a68c-aa3cf8081aca": {
+          "type": "text_item",
+          "settings": {
+            "heading": "People",
+            "text": "We’re dedicated to reducing our carbon footprint as a company and as individuals.",
+            "features": "<ul>\n                            <li>\n                                <p>Environmental education for 1,072 people <\/p>\n                            <\/li>\n                            <li>\n                                <p>Employees provided with metal water bottles to refill instead of plastic water bottles <\/p>\n                            <\/li>\n                            <li>\n                                <p>Electric vehicle charging provided<\/p>\n                            <\/li>\n                        <\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "fdce7ad8-c8a2-4ecf-92b5-99d6d4374a19",
+        "8b4aa731-793e-4232-9935-848b27977123",
+        "2c8c5922-21aa-4453-a68c-aa3cf8081aca"
+      ],
+      "settings": {
+        "heading": "<span>How We Rest Easy and <\/span> You Can Too",
+        "text": "We’re in the business of rejuvenation and when it comes to the planet, that means designing and developing sleep products that are better for the environment. Here’s how we make our commitment to sustainability a reality.",
+        "image": "shopify:\/\/shop_images\/rest-easy.png",
+        "image_1": "shopify:\/\/shop_images\/rest-easy.png"
+      }
+    },
+    "389e8cbd-96b7-4e1c-989d-9f225c1d401a": {
+      "type": "sustain-community",
+      "settings": {
+        "heading": "<span>Giving Back to the <\/span> Community",
+        "text": "We believe that small actions lead to significant, collective change.",
+        "image": "shopify:\/\/shop_images\/rest-image-desktop_b286d823-9384-4bbc-b32d-0728abb9e4c0.png",
+        "image_1": "shopify:\/\/shop_images\/rest-image-tablet_e1fd972e-d376-4120-98a0-af89123f0288.png"
+      }
+    },
+    "446b3c9a-521d-43b6-81bb-4bcbbb689e46": {
+      "type": "sustain-features",
+      "blocks": {
+        "e5a1a54e-922d-4c78-a527-36af3fa8875b": {
+          "type": "item",
+          "settings": {
+            "heading": "One Tree Planted",
+            "text": "We donate to One Tree Planted, a non-profit organization that restores damaged ecosystems and supports the water cycle by growing trees. The funds we give help plant approximately 4,000 trees annually!",
+            "image": "shopify:\/\/shop_images\/ach-icon-1.svg"
+          }
+        },
+        "daae1d23-f890-4b48-9ec5-96fae5892d29": {
+          "type": "item",
+          "settings": {
+            "heading": "Cloverly",
+            "text": "We partner with Cloverly to give customers the power to go green. When shoppers opt-in to use Cloverly at checkout, carbon offsets or renewable energy credits are calculated to make the order carbon neutral, typically adding less than $1 to ecommerce transactions.",
+            "image": "shopify:\/\/shop_images\/ach-icon-2.svg"
+          }
+        },
+        "e107feb9-8d50-4a73-b9b5-b36b73415029": {
+          "type": "item",
+          "settings": {
+            "heading": "Local Outreach & Community Donations",
+            "text": "We promote social sustainability by donating our mattress covers to animal shelters, giving blankets to churches and those in need, supporting youth organizations, participating in food drives and more.",
+            "image": "shopify:\/\/shop_images\/ach-icon-3.svg"
+          }
+        }
+      },
+      "block_order": [
+        "e5a1a54e-922d-4c78-a527-36af3fa8875b",
+        "daae1d23-f890-4b48-9ec5-96fae5892d29",
+        "e107feb9-8d50-4a73-b9b5-b36b73415029"
+      ],
+      "settings": {
+      }
+    },
+    "39e71e7d-13f4-4ce8-a10b-64105337a22f": {
+      "type": "index-only-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/trees-large.png",
+        "image_1": "shopify:\/\/shop_images\/trees-mobile.png",
+        "vector_position": "right"
+      }
+    },
+    "12f39b0b-aa61-49a6-a916-a4d83fe6bb82": {
+      "type": "sustain-future",
+      "settings": {
+        "heading": "<span>Manufacturing a More <\/span> Sustainable Future",
+        "text": "We’re committed to sustainability across the globe. Our dreams for a more sustainable future include striving to move to 80% recycled metal for springs and adjustable bases, adding two additional shipping hubs in the United States to further reduce our carbon footprint and replacing 10% of foam materials with natural resources. We’re focused on setting standards that make our future bright.",
+        "image": "shopify:\/\/shop_images\/sustainable-future.png",
+        "image_1": "shopify:\/\/shop_images\/sustainable-future.png"
+      }
+    },
+    "3a83933c-f2e2-4165-acfc-e3f6762bec32": {
+      "type": "sustain-values",
+      "settings": {
+        "one_heading": "9.8%",
+        "one_text": "Reducing carbon emissions per unit of output by",
+        "two_heading": "Maintaining 100% utilization of green materials",
+        "two_image": "shopify:\/\/shop_images\/leaf-icon.svg",
+        "three_heading": "Recycling",
+        "three_image": "shopify:\/\/shop_images\/recycle-icon.svg",
+        "three_text": "excess materials generated from the assembly process",
+        "four_heading": "100%",
+        "four_text": "Meeting Green Standards of",
+        "four_text_2": "of raw and auxiliary material purchases",
+        "five_heading": "20%",
+        "five_image": "shopify:\/\/shop_images\/upward-arrows.svg",
+        "five_text": "Increasing use of recycled textiles by",
+        "six_heading": "reduce carbon footprint",
+        "six_image": "shopify:\/\/shop_images\/down-arrow.svg",
+        "six_text": "Maintaining the smallest possible Box size to"
+      }
+    }
+  },
+  "order": [
+    "page-banner",
+    "ae337ead-7bda-4c0c-bd20-c4fddabc7efa",
+    "1b81f85c-868f-4d0e-8032-67589d5e0203",
+    "389e8cbd-96b7-4e1c-989d-9f225c1d401a",
+    "446b3c9a-521d-43b6-81bb-4bcbbb689e46",
+    "39e71e7d-13f4-4ce8-a10b-64105337a22f",
+    "12f39b0b-aa61-49a6-a916-a4d83fe6bb82",
+    "3a83933c-f2e2-4165-acfc-e3f6762bec32"
+  ]
+}

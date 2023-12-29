@@ -1,0 +1,185 @@
+<section class="sustainability-values-section">
+    <div class="container">
+        <div class="sustainability-values-main">
+            <div class="sustainability-values-flex">
+                <div class="sustainability-values-single">
+                    <div class="sustainability-values-single-content reducing-content">
+                        <p> {{ section.settings.one_text }} </p>
+                        <h2> {{ section.settings.one_heading }} </h2>
+                    </div>
+                </div>
+                <div class="sustainability-values-single">
+                    <div class="sustainability-values-single-content maintaining-content">
+                        <div class="leaf-image">
+                            {% render 'image-snippet', image: section.settings.two_image %}
+                        </div>
+                        <h3> {{ section.settings.two_heading }} </h3>
+                    </div>
+                </div>
+                <div class="sustainability-values-single">
+                    <div class="sustainability-values-single-content recycling-content">
+                        <div class="recycle-image">
+                            {% render 'image-snippet', image: section.settings.three_image %}
+                        </div>
+                        <h3>{{ section.settings.three_heading }}</h3>
+                        <p>{{ section.settings.three_text }}</p>
+                    </div>
+                </div>
+                <div class="sustainability-values-single">
+                    <div class="sustainability-values-single-content meeting-content">
+                        <h6>{{ section.settings.four_text }}</h6>
+                        <h2>{{ section.settings.four_heading }}</h2>
+                        <h6>{{ section.settings.four_text_2 }}</h6>
+                    </div>
+                </div>
+                <div class="sustainability-values-single">
+                    <div class="sustainability-values-single-content increasing-content">
+                        <div class="upward-arrows">
+                            {% render 'image-snippet', image: section.settings.five_image %}
+                        </div>
+                        <p>{{ section.settings.five_text }}</p>
+                        <h3>{{ section.settings.five_heading }}</h3>
+                    </div>
+                </div>
+                <div class="sustainability-values-single">
+                    <div class="sustainability-values-single-content carbon-content">
+                        <p>{{ section.settings.six_text }} </p>
+                        <h5>{{ section.settings.six_heading }}</h5>
+                        <div class="down-arrow">
+                            {% render 'image-snippet', image: section.settings.six_image %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Sustainability Values",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Value 1"
+            },
+            {
+                "type": "text",
+                "id": "one_heading",
+                "label": "Heading",
+                "default": "9.8%"
+            },
+            {
+                "type": "text",
+                "id": "one_text",
+                "label": "Text",
+                "default": "Reducing carbon emissions per unit of output by"
+            },
+            {
+                "type": "header",
+                "content": "Value 2"
+            },
+            {
+                "type": "text",
+                "id": "two_heading",
+                "label": "Heading",
+                "default": "Maintaining 100% utilization of green materials"
+            },
+            {
+                "type": "image_picker",
+                "id": "two_image",
+                "label": "Image"
+            },
+            {
+                "type": "header",
+                "content": "Value 3"
+            },
+            {
+                "type": "text",
+                "id": "three_heading",
+                "label": "Heading",
+                "default": "Recycling"
+            },
+            {
+                "type": "image_picker",
+                "id": "three_image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "three_text",
+                "label": "Text",
+                "default": "excess materials generated from the assembly process"
+            },
+            {
+                "type": "header",
+                "content": "Value 4"
+            },
+            {
+                "type": "text",
+                "id": "four_heading",
+                "label": "Heading",
+                "default": "100%"
+            },
+            {
+                "type": "text",
+                "id": "four_text",
+                "label": "Text",
+                "default": "Meeting Green Standards of"
+            },
+            {
+                "type": "text",
+                "id": "four_text_2",
+                "label": "Text",
+                "default": "of raw and auxiliary material purchases"
+            },
+            {
+                "type": "header",
+                "content": "Value 5"
+            },
+            {
+                "type": "text",
+                "id": "five_heading",
+                "label": "Heading",
+                "default": "20%"
+            },
+            {
+                "type": "image_picker",
+                "id": "five_image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "five_text",
+                "label": "Text",
+                "default": "Increasing use of recycled textiles by"
+            },
+            {
+                "type": "header",
+                "content": "Value 6"
+            },
+            {
+                "type": "text",
+                "id": "six_heading",
+                "label": "Heading",
+                "default": "reduce carbon footprint"
+            },
+            {
+                "type": "image_picker",
+                "id": "six_image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "six_text",
+                "label": "Text",
+                "default": "Maintaining the smallest possible Box size to"
+            }
+    ],
+        "presets": [
+            {
+                "name" : "Sustainability Values"
+            }
+        ]
+    }
+    {% endschema %}

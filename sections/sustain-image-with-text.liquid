@@ -1,0 +1,53 @@
+<section class="home-partner restful-respect home-sustainability section-padding">
+    <div class="flex-custom d-flex space-b flex-wrap f-row-reverse">
+        <div class="home-partner-child tab-hidden-images restful-respect-child">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child restful-respect-child">
+            <div class="section-bar-partners"> </div>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            {% render 'image-snippet', image: section.settings.image_1, class: 'desktop-hidden-images' %}
+            {% if section.settings.text != blank %}
+                <p> {{ section.settings.text }} </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Sustain Image With Text",
+        "settings": [
+                {
+                    "type": "html",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "<span>Restful. Resourceful.</span> Responsible."
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "As an influential OEM in the mattress, bedding and better sleep product space, we hold a responsibility to create a better future. We don’t take this responsibility lightly, instead we’re paving the way for positive change in the mattress industry."
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_1",
+                    "label": "Image"
+                }
+            ],
+        "presets": [
+            {
+                "name": "Sustain Image With Text"
+            }
+        ]
+    }
+    {% endschema %}
