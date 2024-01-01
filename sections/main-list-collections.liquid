@@ -1,63 +1,79 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
-  <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ section.settings.title }}
-  </h1>
-  {%- liquid
-    case section.settings.sort
-      when 'products_high', 'products_low'
-        assign collections = collections | sort: 'all_products_count'
-      when 'date', 'date_reversed'
-        assign collections = collections | sort: 'published_at'
-    endcase
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}     
+{%- liquid
+case section.settings.sort
+  when 'products_high', 'products_low'
+    assign collections = collections | sort: 'all_products_count'
+  when 'date', 'date_reversed'
+    assign collections = collections | sort: 'published_at'
+endcase
 
-    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
-      assign collections = collections | reverse
-    endif
+if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+  assign collections = collections | reverse
+endif
 
-    assign moduloResult = 28 | modulo: section.settings.columns_desktop
-    assign paginate_by = 30
-    if moduloResult == 0
-      assign paginate_by = 28
-    endif
-  -%}
-  {%- paginate collections by paginate_by -%}
-    <ul
-      class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-      role="list"
-    >
-      {%- for collection in collections -%}
-        <li
-          class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {% render 'card-collection',
-            card_collection: collection,
-            media_aspect_ratio: section.settings.image_ratio,
-            columns: 3
-          %}
-        </li>
-      {%- endfor -%}
-    </ul>
-    {% render 'pagination', paginate: paginate %}
-  {%- endpaginate -%}
-</div>
+assign moduloResult = 28 | modulo: section.settings.columns_desktop
+assign paginate_by = 30
+if moduloResult == 0
+  assign paginate_by = 28
+endif
+-%}
+<!-- Home Sustainability -->
+{%- paginate collections by paginate_by -%}
+<section class="home-partner explore-products home-sustainability section-padding">
+    <div class="container">
+
+    {%- for collection in collections -%}
+      {% if forloop.first %}
+        <div class="flex-custom d-flex space-b flex-wrap f-row-reverse">
+            <div class="home-partner-child tab-hidden-images explore-products-child">
+              {% render 'image-snippet', image: collection.image %}
+            </div>
+            <div class="home-partner-child explore-products-child">
+                <div class="section-bar-partners"> </div>
+                <h2><span> {{ collection.title }} </span></h2>
+                {% render 'image-snippet', image: collection.image, class: 'desktop-hidden-images' %}                
+                <div class="collection-des">
+                  {{ collection.description }}
+                </div>
+                <a class="primary-btn" href="{{ collection.url }}">Learn More</a>
+            </div>
+        </div>
+        {% endif %}
+    {%- endfor -%}
+
+
+        <!-- Product Rows -->
+        <div class="explore-products-rows">
+          {%- for collection in collections -%}
+            {% unless forloop.first %}
+              <div class="explore-products-row">
+                <div class="explore-products-flex d-flex space-b a-end">
+                    <div class="explore-product-left">
+                        <h2><span>{{ collection.title }}</span></h2>
+                        {% render 'image-snippet', image: collection.image, class: 'desktop-hidden-images' %}
+                        <div class="collection-des">
+                          {{ collection.description }}
+                        </div>
+                        <a class="primary-btn" href="{{ collection.url }}">Learn More</a>
+                    </div>
+                    <div class="explore-product-right">
+                      {% render 'image-snippet', image: collection.image %}
+                    </div>
+                </div>
+            </div>
+            {% endunless %}
+          {%- endfor -%}
+        </div>
+        {% render 'pagination', paginate: paginate %}
+    </div>
+</section>
+{%- endpaginate -%}
 {% schema %}
 {
   "name": "t:sections.main-list-collections.name",
   "class": "section",
   "settings": [
-    {
-      "type": "inline_richtext",
-      "id": "title",
-      "label": "t:sections.main-list-collections.settings.title.label",
-      "default": "Collections"
-    },
     {
       "type": "select",
       "id": "sort",

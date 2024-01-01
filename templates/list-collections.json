@@ -1,17 +1,63 @@
 {
   "sections": {
+    "ee167b81-56e4-42f5-b65f-37b7b5d9606d": {
+      "type": "page-banner",
+      "settings": {
+        "heading": "<span class=\"heading-piece\">Explore Our<\/span> <br> Better Sleep Products",
+        "bg_image_1": "shopify:\/\/shop_images\/products-large.png",
+        "bg_image_2": "shopify:\/\/shop_images\/products-desktop.png",
+        "bg_image_3": "shopify:\/\/shop_images\/products-ipad.png",
+        "bg_image_4": "shopify:\/\/shop_images\/products-mobile.png",
+        "vector_position": "left"
+      }
+    },
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
+        "sort": "date",
         "image_ratio": "square",
         "columns_desktop": 3,
         "columns_mobile": "2"
       }
+    },
+    "d390e9bb-9725-4114-adcd-33eefa7aa6ad": {
+      "type": "list-collections-only-image",
+      "settings": {
+        "bg_image_1": "shopify:\/\/shop_images\/divider-large.png",
+        "bg_image_2": "shopify:\/\/shop_images\/divider-desktop.png",
+        "bg_image_3": "shopify:\/\/shop_images\/divider-tablet.png",
+        "bg_image_4": "shopify:\/\/shop_images\/divider-mobile.png",
+        "vector_position": "right"
+      }
+    },
+    "5f2b0d60-575b-4ea2-a002-93306cbc5700": {
+      "type": "collection-listing-looking",
+      "settings": {
+        "heading": "<span>Looking to Create <\/span> Something New?",
+        "richttext": "South Bay International can create custom sleep brands for your business, while handling all of your fulfillment and customer service needs!",
+        "image": "shopify:\/\/shop_images\/create-new.png",
+        "image_1": "shopify:\/\/shop_images\/create-new.png",
+        "button_text_1": "Let’s Innovate!",
+        "button_url_1": "shopify:\/\/pages\/innovation"
+      }
+    },
+    "e03e9c27-e84d-4000-bf22-7de5e7ecf8fc": {
+      "type": "collection-listing-catalog",
+      "settings": {
+        "heading": "<span>Browse <\/span> Our Catalog",
+        "richttext": "Get to know more about South Bay International and browse our selection of better sleep products, from adjustable bases to bedding, in our catalog.",
+        "image": "shopify:\/\/shop_images\/browse.png",
+        "image_1": "shopify:\/\/shop_images\/browse.png",
+        "button_text_1": "Download Our Catalog",
+        "button_url_1": "#"
+      }
     }
   },
   "order": [
-    "main"
+    "ee167b81-56e4-42f5-b65f-37b7b5d9606d",
+    "main",
+    "d390e9bb-9725-4114-adcd-33eefa7aa6ad",
+    "5f2b0d60-575b-4ea2-a002-93306cbc5700",
+    "e03e9c27-e84d-4000-bf22-7de5e7ecf8fc"
   ]
 }

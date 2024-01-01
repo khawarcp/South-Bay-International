@@ -1,0 +1,69 @@
+<section class="home-partner section-padding about-rest browse-catalog">
+    <div class="flex-custom d-flex space-b flex-wrap f-row-reverse">
+        <div class="home-partner-child tab-hidden-images about-rest-child browse-catalog-child">
+            {% render 'image-snippet', image: section.settings.image %}
+        </div>
+        <div class="home-partner-child about-rest-child browse-catalog-child">
+            <div class="section-bar-partners"> </div>
+            {% if section.settings.heading != blank %}
+                <h2> {{ section.settings.heading }} </h2>                    
+            {% endif %}
+            <div class="home-partner-child desktop-hidden-images">
+                {% render 'image-snippet', image: section.settings.image_1 %}
+            </div>
+            <!-- <img class="desktop-hidden-images" src="./assets/visuals/tab-image-1.png" alt="*"> -->
+            {% if section.settings.richttext != blank %}
+                <p> {{ section.settings.richttext }} </p>
+            {% endif %}
+            {% if section.settings.button_text_1 != blank %}                
+                <a class="primary-btn" href="{{ section.settings.button_url_1 | default : "#." }}" download> {{ section.settings.button_text_1 }} </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Catalog",
+        "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "<span>Browse </span> Our Catalog"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "richttext",
+                "label": "Text",
+                "default": "Get to know more about South Bay International and browse our selection of better sleep products, from adjustable bases to bedding, in our catalog."
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_1",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "button_text_1",
+                "label": "Button Text",
+                "default": "Download Our Catalog"
+            },
+            {
+                "type": "url",
+                "id": "button_url_1",
+                "label": "Button URL"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Catalog"
+            }
+        ]
+    }
+    {% endschema %}

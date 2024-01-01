@@ -1,0 +1,11 @@
+{
+    "name" : "Policy",
+    "sections": {
+        "policy-content" : {
+            "type": "policy-content"
+        }
+    },
+    "order": [
+        "policy-content"
+    ]
+}
