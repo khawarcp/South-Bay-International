@@ -1,0 +1,36 @@
+<div class="blog-single-card">
+    {% if show_image %}
+    <div class="blog-single-image">
+        {% render 'image-snippet', image: article.image %}
+    </div>
+    {% endif %}
+    <div class="blog-single-content">
+        {% if show_date %}
+        <span>{{- article.published_at | time_tag: format: 'date' -}}</span>
+        {% endif %}
+        {% if show_author %}
+            <span>{{ article.author | prepend: '| ' }}</span>
+        {% endif %}
+        <p>{{ article.title | truncate: 50 | escape }}</p>
+        {%- if show_excerpt -%}
+            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+              <p>
+                {%- if article.excerpt.size > 0 -%}
+                  {{ article.excerpt | strip_html | truncatewords: 30 }}
+                {%- else -%}
+                  {{ article.content | strip_html | truncatewords: 30 }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+              {%- endif -%}
+          {%- endif -%}
+        <a href="{{ article.url }}">
+            {{ settings.read_more }}
+            <span>
+               {% render 'blog-link-arrow' %}
+            </span>
+        </a>
+    </div>
+</div>

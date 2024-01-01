@@ -354,7 +354,7 @@
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="{{ 'script.js'| asset_url }}" defer></script>
-    {% if template contains 'collection' %}
+    {% if template contains 'collection' or template contains 'blog' %}
       <script src="{{ 'load-more-products.js'| asset_url }}" defer></script>
     {% endif %}
      <!-- Swiper JS -->

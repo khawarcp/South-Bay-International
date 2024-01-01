@@ -14,10 +14,10 @@
                     </a>
                     <span class="blog-posting-date"> {{- article.published_at | time_tag: format: 'date' -}} </span>
                     <a href="{{ article.url }}">
-                        <h3> {{ article.title }} </h3>
+                        <h3> {{ article.title | truncate: 50 | escape }} </h3>
                     </a>
-                    <a class="blog-post-main-perma d-flex a-center" href="{{ article.url }}">Read Blog 
-                        <img src="{{ 'blog-link-arrow.svg' | asset_url }}" alt="blog-link-arrow">
+                    <a class="blog-post-main-perma d-flex a-center" href="{{ article.url }}"> {{ settings.read_more }}
+                        {% render 'blog-link-arrow' %}
                     </a>
                 </div>
             {% endfor %}
