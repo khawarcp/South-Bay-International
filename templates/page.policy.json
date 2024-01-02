@@ -1,11 +1,12 @@
 {
-    "name" : "Policy",
-    "sections": {
-        "policy-content" : {
-            "type": "policy-content"
-        }
-    },
-    "order": [
-        "policy-content"
-    ]
+  "sections": {
+    "policy-content": {
+      "type": "policy-content",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "policy-content"
+  ]
 }

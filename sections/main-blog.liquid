@@ -10,16 +10,50 @@
                             <div class="featured-blog-heading">
                                 <h3> {{ settings.featured_text }} </h3>
                             </div>
-                            <p> {{- article.published_at | time_tag: format: 'date' -}} </p>
+                            
+                            <p> 
+                              {% if section.settings.show_date %}
+                            {{- article.published_at | time_tag: format: 'date' -}}
+                          {% endif %}
+                            {% if section.settings.show_author %}
+                              <span>{{ article.author | prepend: '&#124; ' }}</span>
+                            {% endif %}
+                            </p>
+
                             <h3> {{ article.title | truncate: 50 | escape }} </h3>
+
+                            {%- if section.settings.show_excerpt -%}
+                            <div class="article-excerpt">
+                              {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                                <p>
+                                  {%- if article.excerpt.size > 0 -%}
+                                    {{ article.excerpt | strip_html | truncatewords: 30 }}
+                                  {%- else -%}
+                                    {{ article.content | strip_html | truncatewords: 30 }}
+                                  {%- endif -%}
+                                </p>
+                              {%- endif -%}
+                                {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                                  <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+                                {%- endif -%}
+                                </div>
+                            {%- endif -%}
+
                             <a href="{{ article.url }}" class="primary-btn">{{ settings.read_more }}</a>
                         </div>
                     </div>
                     <div class="featured-blog-right">
                         <div class="featured-blog-image">
-                            <div class="desk-large">
+
+                            {% if article.metafields.custom.large_image %}
+                              <div class="desk-large">
+                                {% render 'image-snippet', image: article.metafields.custom.large_image %}
+                            </div>
+                            {%  else %}
+                              <div class="desk-large">
                                 {% render 'image-snippet', image: article.image %}
                             </div>
+                            {% endif %}
                             {% if article.metafields.custom.desktop_image %}
                             <div class="desk-small">
                                {% render 'image-snippet', image: article.metafields.custom.desktop_image %}
@@ -60,9 +94,8 @@
                   {% for article in blog.articles offset: 1 %}  
                       {% render 'custom-article-card',
                         article: article,
-                        show_image: section.settings.show_image,
                         show_date: section.settings.show_date,
-                        show_author: section.settings.show_author,                        
+                        show_author: section.settings.show_author,
                         show_excerpt: section.settings.show_excerpt                        
                       %}                      
                   {% endfor %}
@@ -86,12 +119,6 @@
     {
       "type": "header",
       "content": "t:sections.main-blog.settings.header.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_image",
-      "default": true,
-      "label": "Display Image"
     },
     {
       "type": "checkbox",

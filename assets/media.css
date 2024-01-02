@@ -134,6 +134,18 @@
   .sustainable-future-child:last-child {
     padding: 0 100px 0px 50px;
   }
+  .container, section, header, footer {
+    max-width: 1920px;
+    margin: auto;
+  }
+
+  #header {
+    left: 0;
+    right: 0;
+  }
+  .media-and-press-contact .home-partner-child:last-child {
+    padding: 0 100px 0px 50px;
+  }
 }
 @media only screen and (max-width: 1679px) {
   .search-input {
@@ -224,6 +236,9 @@
   }
   .more-blogs-section {
     padding: 50px 0px 120px;
+  }
+  .product__media img {
+    height: 470px!important;
   }
 } 
 @media only screen and (max-width: 1400px) {
@@ -683,6 +698,34 @@
   .privacy-service-section {
     padding: 150px 0px 120px;
   }
+  .home-innovation-child:last-child {
+    padding: 0 50px;
+  }
+  .sustainability-commitment-child:last-child {
+    padding: 0 50px;
+  }
+  .media-and-press-contact .home-partner-child:last-child {
+    padding: 0 50px 0px 50px;
+  }
+  .product__media img {
+    height: 324px!important;
+  }
+  .thumbnail img {
+      height: 60px!important;
+  }
+  .thumbnail-slider .thumbnail-list.slider--tablet-up {
+      gap: 0px;
+  }
+  .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
+      width: calc(25% - 0.8rem) !important;
+  }
+  .product-form__buttons {
+      justify-content: center;
+  }
+  
+  .product-form__submit {
+      margin: 0px 0px 20px !important;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -733,6 +776,36 @@
   }
   .about-team-bg {
     height: 450px;
+  }
+  .productMainSection {
+    padding: 150px 0 116px!important;
+  }
+  .product-form__buttons {
+      justify-content: center;
+  }
+  
+  .product-form__submit {
+      margin: 0px 0px 20px !important;
+  }
+  
+  .product-form__input--dropdown, .product-form__quantity {
+      gap: 20px;
+  }
+  
+  .product-form__input .form__label {
+      min-width: auto;
+  }
+  
+  .product-form__input .select__select {
+      letter-spacing: 0px;
+  }
+  
+  .comfort-scale {
+      flex-wrap: wrap;
+  }
+  
+  .grid__item.product__media-wrapper {
+      max-width: 48% !important;
   }
 }
 
@@ -1208,6 +1281,34 @@
   }
   .privacy-service-main ul li {
     font-size: 16px;
+  }
+  .home-innovation-child:last-child {
+    padding: 0 30px;
+  }
+  .sustainability-commitment-child:last-child {
+    padding: 0 30px;
+  }
+  .media-and-press-contact .home-partner-child:last-child {
+    padding: 0 30px 0px 30px;
+  }
+  .privacy-service-section {
+    padding: 150px 0px 60px;
+  }
+  
+  .productMainSection {
+      padding: 120px 0px 100px !important;
+  }
+  
+  .grid__item.product__media-wrapper {
+      max-width: 100% !important;
+  }
+  
+  .product__info-wrapper {
+      max-width: 100% !important;
+  }
+  
+  .product-form__buttons {
+      padding: 0px !important;
   }
 }
 

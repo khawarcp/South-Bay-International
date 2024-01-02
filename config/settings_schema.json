@@ -750,26 +750,26 @@
     "name": "Blog Extended",
     "settings": [
       {
-        "type" : "html",
-        "id" : "blog_heading",
+        "type": "html",
+        "id": "blog_heading",
         "label": "Blog Heading",
-        "default": "<span>Latest</span> Blogs"
+        "default": "<span>Latest<\/span> Blogs"
       },
       {
-        "type" : "text",
-        "id" : "featured_text",
+        "type": "text",
+        "id": "featured_text",
         "label": "Featured Text",
         "default": "featured blog"
       },
       {
-        "type" : "text",
-        "id" : "read_more",
+        "type": "text",
+        "id": "read_more",
         "label": "Article Redirection",
         "default": "Read Blog"
       },
       {
-        "type" : "text",
-        "id" : "view_more",
+        "type": "text",
+        "id": "view_more",
         "label": "Load More",
         "default": "View More"
       }

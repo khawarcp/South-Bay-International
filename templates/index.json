@@ -78,8 +78,33 @@
     },
     "a6b64fd8-713f-4e83-9a30-505fb68d4c1f": {
       "type": "index-articles",
+      "blocks": {
+        "f111dcb0-1ad3-4247-950e-84f8a9a9b425": {
+          "type": "blogpost",
+          "settings": {
+            "article": "news\/5-ways-that-adjustable-bases-impact-sleep"
+          }
+        },
+        "ff2c6564-db2b-4d8a-be34-cfe204a96b61": {
+          "type": "blogpost",
+          "settings": {
+            "article": "news\/innovations-for-the-upcoming-market"
+          }
+        },
+        "5e50be60-9083-47b3-b999-3ce17f8eeebf": {
+          "type": "blogpost",
+          "settings": {
+            "article": "news\/south-bay-international-uncovers-new-active-line-of-mattresses"
+          }
+        }
+      },
+      "block_order": [
+        "f111dcb0-1ad3-4247-950e-84f8a9a9b425",
+        "ff2c6564-db2b-4d8a-be34-cfe204a96b61",
+        "5e50be60-9083-47b3-b999-3ce17f8eeebf"
+      ],
       "settings": {
-        "heading": "<span>Your Partner<\/span> in<br> Innovation",
+        "heading": "<span>New on<\/span> the Blog",
         "blog": "news",
         "no_articles": 4,
         "button_text_1": "See All Blogs",

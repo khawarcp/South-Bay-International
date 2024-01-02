@@ -2,6 +2,7 @@
 .product-title-text,
 .form-label-checkbox,
 .bottom-footer span,
+.product-form__submit,
 h2,
 h3,
 p{
@@ -19,6 +20,38 @@ p{
 
 .about-dedicated-child p b {
     color: #0C2340;
+}
+
+.privacy-service-main a {
+    color: #5e7bab;
+}
+
+.article-excerpt {
+    margin: 15px 0 0;
+}
+
+.blog-detail-head h1{
+  font-weight: 700;
+  color: #5E7BAB;
+  margin: 10px 0px 0px;
+  letter-spacing: normal;
+}
+
+.article-excerpt p {
+    font-weight: 400;
+}
+
+.custom-small-hide{
+    display: block;
+}
+.custom-desktop-hide{
+    display: none;
+}
+
+.blog-single-image.empty-blogpost-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .load-more__spinner {
@@ -41,7 +74,14 @@ p{
     100%{ transform: rotate(360deg)}
 }
 
-@media only screen and (max-width: 767px)
-.product-faqs-padding {
-    padding-top: 60px;
+@media only screen and (max-width: 767px){
+    .product-faqs-padding {
+        padding-top: 60px;
+    }
+    .custom-small-hide{
+        display: none;
+    }
+    .custom-desktop-hide{
+        display: block;
+    }
 }

@@ -1,0 +1,59 @@
+<section class="blogs-grid-section more-blogs-section">
+    <div class="container">
+        <div class="blogs-grid-main">
+            {% if section.settings.heading != blank %}
+            <div class="blogs-grid-head">
+                <h2> {{ section.settings.heading }} </h2>
+            </div>
+            {% endif %}
+            <div class="swiper mySwiper blog-detail-swiper">
+                <div class="swiper-wrapper">
+                    {% for articl in blog.articles limit: 10 %}
+                        {% unless articl.title == article.title %}
+                            <div class="swiper-slide">
+                                {% render 'custom-article-card',
+                                    article: articl,
+                                    show_date: section.settings.show_date,
+                                    show_author: section.settings.show_author,
+                                    show_excerpt: section.settings.show_excerpt                        
+                                %}
+                            </div>
+                        {% endunless %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "More Blogposts",
+    "settings": [
+        {
+            "type": "html",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<span>More</span> Blogs"
+        },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "default": false,
+      "label": "Show Excerpt"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "default": false,
+      "label": "t:sections.main-blog.settings.show_author.label"
+    }   
+    ]
+}
+{% endschema %}

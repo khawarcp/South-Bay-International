@@ -372,7 +372,32 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-    </script>
+    </script>    
+  <script>
+      var swiper = new Swiper(".blog-detail-swiper", {
+          spaceBetween: 30,
+          slidesPerView: 2,
+          centeredSlides: false,
+          autoplay: {
+              delay: 4000,
+              disableOnInteraction: false
+          },
+          breakpoints: {
+              640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+              },
+              768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              },
+              1680: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+              },
+          }
+      });
+  </script>
 
   </body>
 </html>

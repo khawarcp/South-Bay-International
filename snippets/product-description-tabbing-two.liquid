@@ -1,0 +1,29 @@
+<div class="custom-small-hide">
+<div class="product-description-tab-container">
+<!-- HTML DESCRIPTION TABBING -->
+
+<ul class="tab-buttons" id="tabButtons2">
+    {% if overview != blank %}
+        <li class="tab-button" onclick="openTab('overview2')">Overview</li>
+        {% endif %}
+        <li class="tab-button active-tab-button" onclick="openTab('details2')">Details</li>
+        {% if shipping != blank %}
+        <li class="tab-button" onclick="openTab('shipping2')">Shipping Details</li>
+        {% endif %}
+</ul>
+{% if overview != blank %}
+<div id="overview2" class="tab-content">
+     {{ overview }}
+</div>
+{% endif %}
+<div id="details2" class="tab-content active-tab">
+    {{ product.description }}
+</div>
+{% if shipping != blank %}
+<div id="shipping2" class="tab-content">
+    {{ shipping }}
+</div>
+{% endif %}
+<!-- HTML DESCRIPTION TABBING END-->
+</div>
+</div>

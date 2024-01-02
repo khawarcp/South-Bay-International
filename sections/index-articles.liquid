@@ -7,19 +7,22 @@
             <h2> {{ section.settings.heading }} </h2>                    
         {% endif %}
         <div class="home-blog-inner d-flex flex-wrap a-start space-b">
-            {% for article in blogs[section.settings.blog].articles limit: section.settings.no_articles %}                
-                <div class="blog-post">
-                    <a href="{{ article.url }}">
-                        {% render 'image-snippet', image: article.image %}
-                    </a>
-                    <span class="blog-posting-date"> {{- article.published_at | time_tag: format: 'date' -}} </span>
-                    <a href="{{ article.url }}">
-                        <h3> {{ article.title | truncate: 50 | escape }} </h3>
-                    </a>
-                    <a class="blog-post-main-perma d-flex a-center" href="{{ article.url }}"> {{ settings.read_more }}
-                        {% render 'blog-link-arrow' %}
-                    </a>
-                </div>
+            {% for block in section.blocks limit: section.settings.no_articles %}         
+                {% assign article = articles[block.settings.article] %}   
+                {% if article %}
+                    <div class="blog-post">
+                        <a href="{{ article.url }}">
+                            {% render 'image-snippet', image: article.image %}
+                        </a>
+                        <span class="blog-posting-date"> {{- article.published_at | time_tag: format: 'date' -}} </span>
+                        <a href="{{ article.url }}">
+                            <h3> {{ article.title | truncate: 50 | escape }} </h3>
+                        </a>
+                        <a class="blog-post-main-perma d-flex a-center" href="{{ article.url }}"> {{ settings.read_more }}
+                            {% render 'blog-link-arrow' %}
+                        </a>
+                    </div>
+                {% endif %} 
             {% endfor %}
         </div>
        {% if section.settings.button_text_1 != blank %}                
@@ -65,6 +68,19 @@
                 "label": "Button URL"
             }
         ],
+        "blocks": [
+            {
+                "type": "blogpost",
+                "name": "Blogpost",
+                "settings": [
+                    {
+                        "type": "article",
+                        "id": "article",
+                        "label": "Article"
+                    }
+                ]
+            }
+        ],
         "presets": [
             {
                 "name" : "Articles"
@@ -72,3 +88,5 @@
         ]
     }
 {% endschema %}
+
+

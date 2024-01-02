@@ -1,29 +1,29 @@
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  var containerId = evt.currentTarget.closest('.tab').id;
+function openTab(tabName) {
+  var i, tabContent, tabButton;
 
-  tabcontent = document.querySelectorAll(`#${containerId} .tabcontent`);
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  
-  tablinks = document.querySelectorAll(`#${containerId} .tablinks`);
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  // Extract the numeric suffix from the tabName
+  var setNumber = tabName.match(/\d+/)[0];
+
+  // Hide all tab content for the specific set
+  tabContent = document.querySelectorAll('#overview' + setNumber + ', #details' + setNumber + ', #shipping' + setNumber);
+  for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = 'none';
   }
 
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+  // Remove 'active-tab' class from all tab buttons for the specific set
+  tabButton = document.querySelectorAll('#tabButtons' + setNumber + ' .tab-button');
+  for (i = 0; i < tabButton.length; i++) {
+      tabButton[i].classList.remove('active-tab');
+  }
+
+  // Show the selected tab content for the specific set
+  document.getElementById(tabName).style.display = 'block';
+
+  // Add 'active-tab' class to the clicked tab button for the specific set
+  event.currentTarget.classList.add('active-tab');
 }
 
-// Get the element with class="tablinks" and click on it for each tab set
-document.querySelectorAll('.tab .tablinks').forEach(function(button) {
-  button.addEventListener('click', function() {
-    openCity(event, button.getAttribute('data-city'));
-  });
-});
-
-// Trigger the click on the default tab for each tab set
-document.querySelectorAll('.tab .tablinks#defaultOpen').forEach(function(button) {
-  button.click();
-});
+// Show the default tab for each set on page load
+openTab('details1');
+openTab('details2');
+openTab('details3');

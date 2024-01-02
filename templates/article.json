@@ -3,12 +3,6 @@
     "main": {
       "type": "main-article",
       "blocks": {
-        "featured_image": {
-          "type": "featured_image",
-          "settings": {
-            "image_height": "adapt"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -16,29 +10,40 @@
             "blog_show_author": false
           }
         },
-        "share": {
-          "type": "share",
+        "featured_image": {
+          "type": "featured_image",
           "settings": {
-            "share_label": "Share"
+            "image_height": "adapt"
           }
         },
         "content": {
           "type": "content",
           "settings": {
           }
+        },
+        "4d756d9a-89b2-4aa4-817b-c8db237bf9e7": {
+          "type": "social_media",
+          "settings": {
+            "email_address": "info@southbayinternational.com"
+          }
         }
       },
       "block_order": [
-        "featured_image",
         "title",
-        "share",
-        "content"
+        "featured_image",
+        "content",
+        "4d756d9a-89b2-4aa4-817b-c8db237bf9e7"
       ],
       "settings": {
+        "show_back_top": false
       }
+    },
+    "article-more-articles":{
+      "type": "article-more-articles"
     }
   },
   "order": [
-    "main"
+    "main",
+    "article-more-articles"
   ]
 }
